@@ -1,0 +1,17 @@
+{
+  "data": {
+    "type": "users",
+    "id": "3",
+    "attributes": {
+      "first_name": "Jessika",
+      "last_name": "Lowe",
+      "image_url": "/images/default_user_image.png",
+      "email": "patient@goharvey.com",
+      "phone": "3101234568",
+      "gender": null
+    },
+    "links": {
+      "self": "http://harvey.app/api/v1/users/3"
+    }
+  }
+}

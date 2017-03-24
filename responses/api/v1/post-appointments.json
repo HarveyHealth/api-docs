@@ -1,0 +1,19 @@
+{
+  "data": {
+    "type": "appointments",
+    "id": "24",
+    "attributes": {
+      "patient_id": 1,
+      "practitioner_id": 1,
+      "appointment_at": {
+        "date": "2017-11-11 00:00:00.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "reason_for_visit": "why not"
+    },
+    "links": {
+      "self": "http://harvey.app/api/v1/appointments/24"
+    }
+  }
+}

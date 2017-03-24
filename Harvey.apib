@@ -1,0 +1,315 @@
+# Group Harvey
+
+Harvey REST API.
+
+Follows [json-api standards](http://jsonapi.org/format/)
+
+# Group Auth
+## Generate Auth Tokens [/oauth/token]
+
+### Generate Auth Tokens [POST]
+
+Get access token and refresh token for a specific user.
+Client id and client secret must be provided by a Harvey administrator.
+
++ Request
+
+    + Headers
+
+            Content-Type: application/json
+
+    + Body
+
+    	    {
+				"grant_type": "password",
+				"client_id": 1,
+				"client_secret": "0mUktabHH9evbtfoJ3Fyf9EYJ90jbVBeAMArZfsD",
+				"username": "patient@goharvey.com",
+				"password": "secret",
+				"scope": "*"
+			}
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/oauth/post-token.json) -->
+
+
+
+
+# Group User
+## Get User [/api/v1/users/3]
+
+### Get User [GET]
+
+Get a user by their ID.
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/users/get-3.json) -->
+
+
+
+
+
+## Update User [/api/v1/users/3]
+
+### Update User [PATCH]
+
+DESCRIPTION
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/users/patch-3.json) -->
+
+
+
+
+# Group Appointment
+## List Appointments [/api/v1/appointments]
+
+### List Appointments [GET]
+
+View a listing of appointments associated to the authorized user.
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/get-appointments.json) -->
+
+
+
+
+
+## Get Appointment [/api/v1/appointments/1]
+
+### Get Appointment [GET]
+
+View details of a specific appointment.
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/appointments/get-1.json) -->
+
+
+
+
+
+## Create an Appointment [/api/v1/appointments]
+
+### Create an Appointment [POST]
+
+DESCRIPTION
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+    + Body
+
+    	    {
+				"appointment_at": "2017-11-11 00:00:00",
+				"reason_for_visit": "why not",
+				"practitioner_id": 1
+			}
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/post-appointments.json) -->
+
+
+
+
+# Group Patient
+## Get Patient [/api/v1/patients/1]
+
+### Get Patient [GET]
+
+DESCRIPTION
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+    + Body
+
+    	    {
+				"appointment_at": "2017-11-11 00:00:00",
+				"reason_for_visit": "why not",
+				"practitioner_id": 1
+			}
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/patients/get-1.json) -->
+
+
+
+
+
+## Update Patient [/api/v1/patients/1]
+
+### Update Patient [PATCH]
+
+Update a patient&#39;s information
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+    + Body
+
+    	    {
+				"birthdate": "1984-01-12",
+				"height_feet": 6,
+				"height_inches": 1,
+				"weight": 210,
+				"symptoms": "{\"this\": 2, \"is\": 3, \"new\": 2}"
+			}
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/patients/patch-1.json) -->
+
+
+
+
+# Group Test
+## Get Test [/api/v1/tests/1]
+
+### Get Test [GET]
+
+Get test information by id.
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+    + Body
+
+    	    {
+				"appointment_at": "2017-11-11 00:00:00",
+				"reason_for_visit": "why not",
+				"practitioner_id": 1
+			}
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/tests/get-1.json) -->
+
+
+
+
+
+## Upload Test Results [/api/v1/tests/1/results]
+
+### Upload Test Results [POST]
+
+Upload PDF file for test results.
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/x-www-form-urlencoded
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/tests/1/post-results.json) -->
+
+
+
+
+
