@@ -3,3 +3,6 @@ docker run --rm -it -v "$PWD:/opt" phillippohlandt/pmtoapib -collection Harvey.p
 
 Run aglio server
 aglio -i Harvey.apib --theme-template triple -o output.html --server
+
+Generate new index file
+aglio -i Harvey.apib --theme-template triple -o public/index.html
