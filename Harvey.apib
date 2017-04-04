@@ -1,8 +1,31 @@
 # Group Harvey
 
-Harvey REST API.
+Harvey API
 
-Follows [json-api standards](http://jsonapi.org/format/)
+Notes for internal API consumption via Vue:
+[Laravel Documentation](https://laravel.com/docs/5.4/passport#consuming-your-api-with-javascript)
+
+We make every attempt to adhere to [json-api standards](http://jsonapi.org/format/)
+
+Suggestions or Corrections may be directed to engineers@goharvey.com.
+
+# Group Errors
+## Errors Responses [/]
+All Error responses will return an appropriate status code along with a body containing an array of error objects with a key of `errors`.
+
+Each error object contains a `title`, `type`, and `detail`.
+
+```json
+{
+    "errors": [
+        {
+            "title": "Unauthenticated.",
+            "type": "about:blank",
+            "detail": "You do not have access to modify the user with id 1."
+        }
+    ]
+}
+```
 
 # Group Auth
 ## Generate Auth Tokens [/oauth/token]
@@ -41,8 +64,48 @@ Client id and client secret must be provided by a Harvey administrator.
 
 
 # Group User
-## Get User [/api/v1/users/3]
 
+## Create User [/api/v1/users]
+### Create User [POST]
+
+Create a new user. This will also create a related `patient`.
+
++ Parameters
+    + first_name (string)
+    + last_name (string)
+    + email (string)
+    + password (string)
+    + terms (boolean)
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+    + Body
+
+        {
+            "first_name": "2017-11-11 00:00:00",
+            "last_name": "why not",
+            "email": "johnsmith@aol.com",
+            "password": "somepassword",
+            "terms": true
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/users/get-3.json) -->
+
+
+## Get User [/api/v1/users/3]
 ### Get User [GET]
 
 Get a user by their ID.
@@ -66,10 +129,7 @@ Get a user by their ID.
 
 
 
-
-
 ## Update User [/api/v1/users/3]
-
 ### Update User [PATCH]
 
 DESCRIPTION
@@ -154,6 +214,11 @@ View details of a specific appointment.
 ### Create an Appointment [POST]
 
 DESCRIPTION
+
++ Parameters
+    + appointment_at (string) - Datetime string example: "2017-11-11 00:00:00"
+    + reason_for_visit (string)
+    + practitioner_id (number)
 
 + Request
 
