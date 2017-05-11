@@ -64,6 +64,38 @@ Client id and client secret must be provided by a Harvey administrator.
 
 
 # Group User
+## List Users [/api/v1/users]
+
+### List Users [GET]
+
+View a listing of enabled users.
+
++ Parameters
+    + per_page (number, optional) - Enables pagination and set items per page.
+    + term (string, optional) - Filter results by string.
+    + type (string, optional) - ['practitioner', 'patient', 'admin'] filter results by type.
+    + indexed (boolean, optional) - Use indexed search, faster, for "as you type" searches.
+    + include (string, optional) - ['practitioner', 'patient'] Join relationship data.
+
++ Request
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(responses/api/v1/get-users.json) -->
+
+
+
 
 ## Create User [/api/v1/users]
 ### Create User [POST]
@@ -161,6 +193,9 @@ DESCRIPTION
 
 View a listing of appointments associated to the authorized user.
 
++ Parameters
+    + include (string, optional) - ['practitioner', 'patient', 'patient.user', ...] join relationship data.
+
 + Request
 
     + Headers
@@ -187,6 +222,9 @@ View a listing of appointments associated to the authorized user.
 ### Get Appointment [GET]
 
 View details of a specific appointment.
+
++ Parameters
+    + include (string, optional) - ['practitioner', 'patient', 'patient.user', ...] join relationship data.
 
 + Request
 

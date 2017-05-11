@@ -10,7 +10,8 @@
         "timezone_type": 3,
         "timezone": "UTC"
       },
-      "reason_for_visit": "why not"
+      "reason_for_visit": "why not",
+      "status": "pending"
     },
     "links": {
       "self": "http://harvey.app/api/v1/appointments/24"

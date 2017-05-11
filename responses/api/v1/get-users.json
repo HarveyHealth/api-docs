@@ -1,0 +1,51 @@
+{
+    "data": [{
+        "type": "users",
+        "id": "1",
+        "attributes": {
+            "email": "admin@goharvey.com",
+            "first_name": "Katlynn",
+            "gender": null,
+            "image_url": "\/images\/default_user_image.png",
+            "last_name": "Nikolaus",
+            "phone": "3101234567",
+            "user_type": "admin",
+            "zip": "76496"
+        },
+        "links": {
+            "self": "http:\/\/localhost:8000\/api\/v1\/users\/1"
+        }
+    }, {
+        "type": "users",
+        "id": "2",
+        "attributes": {
+            "email": "patient@goharvey.com",
+            "first_name": "Roxanne",
+            "gender": null,
+            "image_url": "\/images\/default_user_image.png",
+            "last_name": "Predovic",
+            "phone": "3101234568",
+            "user_type": "patient",
+            "zip": "37195-4579"
+        },
+        "links": {
+            "self": "http:\/\/localhost:8000\/api\/v1\/users\/2"
+        }
+    }, {
+        "type": "users",
+        "id": "3",
+        "attributes": {
+            "email": "practitioner@goharvey.com",
+            "first_name": "Osvaldo",
+            "gender": null,
+            "image_url": "\/images\/default_user_image.png",
+            "last_name": "Eichmann",
+            "phone": "3101234569",
+            "user_type": "practitioner",
+            "zip": "81510"
+        },
+        "links": {
+            "self": "http:\/\/localhost:8000\/api\/v1\/users\/3"
+        }
+    }]
+}

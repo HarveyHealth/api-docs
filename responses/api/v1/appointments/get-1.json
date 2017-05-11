@@ -3,14 +3,16 @@
     "type": "appointments",
     "id": "1",
     "attributes": {
-      "patient_id": 1,
-      "practitioner_id": 1,
       "appointment_at": {
         "date": "2017-03-21 09:21:51.000000",
         "timezone_type": 3,
         "timezone": "UTC"
       },
-      "reason_for_visit": "Aut blanditiis ab beatae ex consequatur aut."
+      "patient_id": 1,
+      "practitioner_id": 5,
+      "practitioner_name": "Adele Turner",
+      "reason_for_visit": "Aut blanditiis ab beatae ex consequatur aut.",
+      "status": "complete"
     },
     "links": {
       "self": "http://harvey.app/api/v1/appointments/1"
