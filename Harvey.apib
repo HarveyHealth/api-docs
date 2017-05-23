@@ -110,7 +110,7 @@ Create a new user. This will also create a related `patient`.
             "terms": true,
             "zip": 90401
         }
-+ Response 200 (application/json)
++ Response 201 (application/json)
     + Headers
     + Body
         <!-- include(responses/api/v1/users/get-3.json) -->
@@ -223,7 +223,7 @@ View details of a specific appointment.
             "practitioner_id": 1,
             "patient_id": 1
         }
-+ Response 200 (application/json)
++ Response 201 (application/json)
     + Headers
     + Body
         <!-- include(responses/api/v1/post-appointments.json) -->
@@ -337,3 +337,105 @@ Upload PDF file for test results.
     + Headers
     + Body
         <!-- include(responses/api/v1/tests/1/post-results.json) -->
+
+# Group Message
+## List Messages [/api/v1/messages]
+### List Messages [GET]
+
+View a listing of messages associated to the authorized user (Admin role can get any message).
+
++ Parameters
+    + filter: `unread` (string, optional) - Set a filter for messages
+        + Members
+            + `unread`
+    + recipient_user_id: `3` (number, optional) - Get messages with an specific recipient, only Admin can set this parameter. For non-admins this value will be automatically set to the current logged in user_id.
+    + sender_user_id: `3` (number, optional) - Get messages with an specific recipient, only Admin can set this parameter.
+    + term: `medicine` (string, optional) - Filter results looking for string inside message body.
+    + per_page: `3` (number, optional) - Enables pagination and set items per page.
+    + include: `recipient` (string, optional) - Join relationship data (User).
+        + Members
+            + `sender`
+            + `recipient`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/get-messages.json) -->
+
+## Get Message [/api/v1/messages/1]
+### Get a Message [GET]
+View details of a specific message.
+
++ Require Admin or current logged in User as the Sender or Recipient of the message.
+
++ Parameters
+    + include: `recipient` (string, optional) - Join relationship data (User).
+        + Members
+            + `sender`
+            + `recipient`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/messages/get-1.json) -->
+
+## Mark a message as read [/api/v1/messages/1/read]
+### Mark a message as read [PUT]
+
++ Require Admin or current logged in User as Recipient of the message.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/messages/get-2.json) -->
+
+## Create Message [/api/v1/messages]
+### Create a Message [POST]
+
++ No special role required.
+
++ Parameters
+    + recipient_user_id: `9` (number, required) - Recipient, must be a valid ID.
+    + message: `Hi there!` (string, required) - Message body.
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "recipient_user_id": 9,
+            "message": "Hi there!"
+        }
++ Response 201 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/post-messages.json) -->
+
+## Delete a Message [/api/v1/messages/1]
+### Delete a Message [DELETE]
+
++ Admin role required.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 204 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/delete-messages.json) -->

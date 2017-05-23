@@ -1,0 +1,25 @@
+{
+  "data": {
+    "type": "messages",
+    "id": "2",
+    "attributes": {
+        "message": "Et omnis fugit cumque.",
+        "sender_user_id": "68",
+        "recipient_user_id": "70",
+        "is_sender_admin": false,
+        "read_at": {
+            "date": "2017-06-23 13:53:12.753351",
+            "timezone_type": 3,
+            "timezone": "UTC"
+        },
+        "created_at": {
+            "date": "2017-06-22 15:09:03.004245",
+            "timezone_type": 3,
+            "timezone": "UTC"
+        }
+    },
+    "links": {
+        "self": "http://harvey.app/api/v1/messages/2"
+    }
+  }
+}

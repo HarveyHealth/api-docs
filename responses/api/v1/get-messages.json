@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "type": "messages",
+      "id": "1",
+      "attributes": {
+          "message": "Et omnis fugit dolore cumque.",
+          "sender_user_id": "71",
+          "recipient_user_id": "72",
+          "is_sender_admin": false,
+          "read_at": null,
+          "created_at": {
+              "date": "2017-05-23 13:53:00.000000",
+              "timezone_type": 3,
+              "timezone": "UTC"
+          }
+      },
+      "links": {
+          "self": "http://harvey.app/api/v1/messages/1"
+      }
+    },
+    {
+      "type": "messages",
+      "id": "2",
+      "attributes": {
+          "message": "Adipisci sit optio consectetur fugit ut quis dolorem.",
+          "sender_user_id": "73",
+          "recipient_user_id": "72",
+          "is_sender_admin": false,
+          "read_at": {
+              "date": "2017-05-23 13:53:09.000000",
+              "timezone_type": 3,
+              "timezone": "UTC"
+          },
+          "created_at": {
+              "date": "2017-05-23 13:53:00.000000",
+              "timezone_type": 3,
+              "timezone": "UTC"
+          }
+      },
+      "links": {
+          "self": "http://harvey.app/api/v1/messages/2"
+      }
+    },
+    {
+      "type": "messages",
+      "id": "3",
+      "attributes": {
+          "message": "Optio sunt est nesciunt repellat commodi laboriosam ipsa recusandae.",
+          "sender_user_id": "75",
+          "recipient_user_id": "72",
+          "is_sender_admin": false,
+          "read_at": null,
+          "created_at": {
+              "date": "2017-05-23 13:53:00.000000",
+              "timezone_type": 3,
+              "timezone": "UTC"
+          }
+      },
+      "links": {
+          "self": "http://harvey.app/api/v1/messages/3"
+      }
+    }
+  ]
+}
