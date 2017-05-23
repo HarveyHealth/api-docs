@@ -3,14 +3,15 @@
     "type": "appointments",
     "id": "24",
     "attributes": {
-      "patient_id": 1,
-      "practitioner_id": 1,
       "appointment_at": {
-        "date": "2017-11-11 00:00:00.000000",
+        "date": "2019-03-01 15:30:00.000000",
         "timezone_type": 3,
         "timezone": "UTC"
       },
-      "reason_for_visit": "why not",
+      "patient_id": 1,
+      "practitioner_id": 1,
+      "practitioner_name": "John Doe",
+      "reason_for_visit": "Why not?",
       "status": "pending"
     },
     "links": {

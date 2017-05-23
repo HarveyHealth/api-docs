@@ -3,10 +3,11 @@
     "type": "patients",
     "id": "1",
     "attributes": {
-      "user_id": 3,
       "birthdate": "1984-01-12",
       "height_feet": 6,
-      "height_inches": 1
+      "height_inches": 1,
+      "name": "John Doe",
+      "user_id": 3
     },
     "links": {
       "self": "http://harvey.app/api/v1/patients/1"
