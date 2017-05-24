@@ -16,7 +16,8 @@
             "date": "2017-06-22 15:09:03.004245",
             "timezone_type": 3,
             "timezone": "UTC"
-        }
+        },
+        "subject": "This is the subject..."
     },
     "links": {
         "self": "http://harvey.app/api/v1/messages/2"
