@@ -1,0 +1,33 @@
+{
+    "data": [{
+        "type": "practitioner",
+        "id": "1",
+        "attributes": {
+            "name": "Camila Goodwin",
+            "type_name": "Naturopathic Doctor"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/practitioner/1"
+        }
+    }, {
+        "type": "practitioner",
+        "id": "2",
+        "attributes": {
+            "name": "Dudley Fay",
+            "type_name": "Short Order Cook"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/practitioner/2"
+        }
+    }, {
+        "type": "practitioner",
+        "id": "3",
+        "attributes": {
+            "name": "Karolann Mante",
+            "type_name": "Naturopathic Doctor"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/practitioner/3"
+        }
+    }]
+}

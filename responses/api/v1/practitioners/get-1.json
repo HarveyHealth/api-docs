@@ -1,0 +1,34 @@
+{
+    "data": {
+        "type": "practitioner",
+        "id": "1",
+        "attributes": {
+            "name": "Camila Goodwin",
+            "type_name": "Naturopathic Doctor"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/practitioner/1"
+        }
+    },
+    "meta": {
+        "availability": [
+            [{
+                "day": "Wednesday",
+                "time": "01:30"
+            }, {
+                "day": "Friday",
+                "time": "04:00"
+            }],
+            [{
+                "day": "Wednesday",
+                "time": "01:30"
+            }, {
+                "day": "Wednesday",
+                "time": "02:00"
+            }, {
+                "day": "Wednesday",
+                "time": "02:30"
+            }]
+        ]
+    }
+}
