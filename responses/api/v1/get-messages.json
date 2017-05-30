@@ -8,6 +8,10 @@
           "sender_user_id": "71",
           "recipient_user_id": "72",
           "is_sender_admin": false,
+          "recipient_full_name": "John Doe",
+          "recipient_image_url": "/images/users/4d186321c1a7f0f354b297e8914ab240.png",
+          "sender_full_name": "Willy Wonka",
+          "sender_image_url": "/images/users/2e80a184267270fc8a50f3f9aef3902e.png",
           "read_at": null,
           "created_at": {
               "date": "2017-05-23 13:53:00.000000",
@@ -28,6 +32,10 @@
           "sender_user_id": "73",
           "recipient_user_id": "72",
           "is_sender_admin": false,
+          "recipient_full_name": "John Doe",
+          "recipient_image_url": "/images/users/4d186321c1a7f0f354b297e8914ab240.png",
+          "sender_full_name": "Moises Christiansen",
+          "sender_image_url": "/images/users/464e3912cc8d118beb4c2ffb6d12eb7c.png",
           "read_at": {
               "date": "2017-05-23 13:53:09.000000",
               "timezone_type": 3,
@@ -52,6 +60,10 @@
           "sender_user_id": "75",
           "recipient_user_id": "72",
           "is_sender_admin": false,
+          "recipient_full_name": "John Doe",
+          "recipient_image_url": "/images/users/4d186321c1a7f0f354b297e8914ab240.png",
+          "sender_full_name": "Junior Williamson",
+          "sender_image_url": "/images/users/c0f6c835e09fd7eeb76c3e782e3a01af.png",
           "read_at": null,
           "created_at": {
               "date": "2017-05-23 13:53:00.000000",

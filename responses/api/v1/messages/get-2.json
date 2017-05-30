@@ -3,21 +3,25 @@
     "type": "messages",
     "id": "2",
     "attributes": {
-        "message": "Et omnis fugit cumque.",
-        "sender_user_id": "68",
-        "recipient_user_id": "70",
+        "message": "Laudantium quis assumenda ut tempora ab repellat.",
+        "sender_user_id": "71",
+        "recipient_user_id": "72",
         "is_sender_admin": false,
+        "recipient_full_name": "John Doe",
+        "recipient_image_url": "/images/users/4d186321c1a7f0f354b297e8914ab240.png",
+        "sender_full_name": "Willy Wonka",
+        "sender_image_url": "/images/users/2e80a184267270fc8a50f3f9aef3902e.png",
         "read_at": {
-            "date": "2017-06-23 13:53:12.753351",
+            "date": "2017-06-24 12:51:12.333320",
             "timezone_type": 3,
             "timezone": "UTC"
         },
         "created_at": {
-            "date": "2017-06-22 15:09:03.004245",
+            "date": "2017-06-23 19:12:01.124549",
             "timezone_type": 3,
             "timezone": "UTC"
         },
-        "subject": "This is the subject..."
+        "subject": "This is another subject..."
     },
     "links": {
         "self": "http://harvey.app/api/v1/messages/2"
