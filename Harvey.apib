@@ -441,3 +441,62 @@ View details of a specific message.
     + Headers
     + Body
         <!-- include(responses/api/v1/delete-messages.json) -->
+
+# Group Pagination
+## Practitioners Pagination [/api/v1/practitioners?per_page=:number]
+### Paginated results [GET]
+
+This example belongs to 'practitioners' endpoint but it perfectly applies to others endpoints
+were pagination is available.
+
++ Parameters
+    + per_page: `2` (number, required) - Enables pagination if available.
+    + page: `5` (number, optional) - Retrieves an specific page.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        {
+            "data": [{
+                "type": "practitioner",
+                "id": "9",
+                "attributes": {
+                    "name": "Esmeralda Powlowski",
+                    "type_name": "Naturopathic Doctor"
+                },
+                "links": {
+                    "self": "http://harvey.app/api/v1/practitioner/9"
+                }
+            }, {
+                "type": "practitioner",
+                "id": "10",
+                "attributes": {
+                    "name": "Marian Gutmann",
+                    "type_name": "Naturopathic Doctor"
+                },
+                "links": {
+                    "self": "http://harvey.app/api/v1/practitioner/10"
+                }
+            }],
+            "meta": {
+                "pagination": {
+                    "total": 40,
+                    "count": 2,
+                    "per_page": 2,
+                    "current_page": 5,
+                    "total_pages": 20
+                }
+            },
+            "links": {
+                "self": "http://harvey.app/api/v1/practitioners?per_page=2&page=5",
+                "first": "http://harvey.app/api/v1/practitioners?per_page=2&page=1",
+                "prev": "http://harvey.app/api/v1/practitioners?per_page=2&page=4",
+                "next": "http://harvey.app/api/v1/practitioners?per_page=2&page=6",
+                "last": "http://harvey.app/api/v1/practitioners?per_page=2&page=20"
+            }
+        }

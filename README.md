@@ -1,4 +1,5 @@
 Generate API Blueprint file from Postman Collection:
+[Warning: Postman Collection file is outdated!]
 
 `docker run --rm -it -v "$PWD:/opt" phillippohlandt/pmtoapib -collection Harvey.postman_collection.json`
 

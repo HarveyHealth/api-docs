@@ -15,7 +15,7 @@
             }
         },
         "links": {
-            "self": "http://localhost:8000/api/v1/messages/5"
+            "self": "http://harvey.app/api/v1/messages/5"
         }
     },
     "meta": {
