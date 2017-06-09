@@ -1,0 +1,49 @@
+{
+    "data": [{
+        "type": "lab_tests",
+        "id": "1",
+        "attributes": {
+            "lab_order_id": "1",
+            "sku_id": "7",
+            "status": "shipped",
+            "results_url": null,
+            "shipment_code": "9789532897364",
+            "completed_at": null
+        },
+        "links": {
+            "self": "http://localhost:8000/api/v1/lab_tests/1"
+        }
+    }, {
+        "type": "lab_tests",
+        "id": "2",
+        "attributes": {
+            "lab_order_id": "1",
+            "sku_id": "8",
+            "status": "shipped",
+            "results_url": null,
+            "shipment_code": "9785234348937",
+            "completed_at": {
+                "date": "2017-03-21 15:47:01.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            }
+        },
+        "links": {
+            "self": "http://localhost:8000/api/v1/lab_tests/2"
+        }
+    }, {
+        "type": "lab_tests",
+        "id": "3",
+        "attributes": {
+            "lab_order_id": "1",
+            "sku_id": "11",
+            "status": "shipped",
+            "results_url": null,
+            "shipment_code": "9797356539001",
+            "completed_at": null
+        },
+        "links": {
+            "self": "http://localhost:8000/api/v1/lab_tests/3"
+        }
+    }]
+}

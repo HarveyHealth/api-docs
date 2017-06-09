@@ -485,6 +485,113 @@ View details of a specific message.
     + Body
         <!-- include(responses/api/v1/delete-messages.json) -->
 
+# Group LabTest
+## List LabTests [/api/v1/lab/tests]
+### List LabTests [GET]
+
+View a listing of lab-tests.
+
++ Admin required.
+
++ Parameters
+    + per_page: `2` (number, optional) - Enables pagination and set items per page.
+    + include: `lab_order` (string, optional) - Join relationship data.
+        + Members
+            + `patient`
+            + `practitioner`
+            + `lab_order`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/lab/get-tests.json) -->
+
+## Create LabTest [/api/v1/lab/tests]
+### Create a LabTest [POST]
+
+Create a new lab-test. Since any lab test belongs to one lab order, you need to submit the lab_order_id to put this new lab-test under. Requires Admin.
+
++ Parameters
+    + lab_order_id: `15` (number, required) - LabOrder, must be a valid ID.
+    + sku_id: `12` (number, required) - SKU, must be a valid ID.
+    + status: `shipped` (enum[string], optional) - LabTest status.
+        + Members
+            + `canceled`
+            + `complete`
+            + `mailed`
+            + `pending`
+            + `processing`
+            + `received`
+            + `shipped`
+    + results_url: `goharvey.com/lab/tests/1234` (string, optional) - If present, must be a valid URL.
+    + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "lab_order_id": 15,
+            "sku_id": 12,
+        }
+
++ Response 201 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/lab/post-tests.json) -->
+
+## Get LabTest [/api/v1/lab/tests/1]
+### Get a LabTest [GET]
+
+Get a lab-test by its ID.
+
++ Require Admin or current logged in User as the Patient or Practitioner of the LabOrder associated with this LabTest.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/lab/tests/get-1.json) -->
+
+## Update a LabTest [/api/v1/lab/tests/1]
+### Update LabTest [PATCH]
+
++ Require Admin or current logged in User as Practitioner of the LabOrder associated with this LabTest. Additionaly, if LabTest status is 'complete', it can't be updated.
+
++ Parameters
+    + status: `shipped` (enum[string], optional) - LabTest status.
+        + Members
+            + `canceled`
+            + `complete`
+            + `mailed`
+            + `pending`
+            + `processing`
+            + `received`
+            + `shipped`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "status": "mailed",
+        }
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/lab/tests/patch-3.json) -->
+
 # Group Pagination
 ## Practitioners Pagination [/api/v1/practitioners?per_page=:number]
 ### Paginated results [GET]

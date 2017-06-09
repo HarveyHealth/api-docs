@@ -1,0 +1,21 @@
+{
+    "data": {
+        "type": "lab_tests",
+        "id": "3",
+        "attributes": {
+            "lab_order_id": "1",
+            "sku_id": "9",
+            "status": "mailed",
+            "results_url": null,
+            "shipment_code": "9790026671902",
+            "completed_at": {
+                "date": "2017-06-09 03:46:39.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            }
+        },
+        "links": {
+            "self": "http://localhost:8000/api/v1/lab_tests/3"
+        }
+    }
+}
