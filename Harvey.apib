@@ -470,7 +470,7 @@ View details of a specific message.
     + Body
         <!-- include(responses/api/v1/post-messages.json) -->
 
-## Delete a Message [/api/v1/messages/1]
+## Delete a Message [/api/v1/messages/5]
 ### Delete a Message [DELETE]
 
 + Admin role required.
@@ -481,9 +481,6 @@ View details of a specific message.
         X-Requested-With: XMLHttpRequest
         Content-Type: application/json
 + Response 204 (application/json)
-    + Headers
-    + Body
-        <!-- include(responses/api/v1/delete-messages.json) -->
 
 # Group LabTest
 ## List LabTests [/api/v1/lab/tests]
@@ -591,6 +588,124 @@ Get a lab-test by its ID.
     + Headers
     + Body
         <!-- include(responses/api/v1/lab/tests/patch-3.json) -->
+
+## Delete LabTest [/api/v1/lab/tests/2]
+### Delete a LabTest [DELETE]
+
++ Admin role required.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 204 (application/json)
+
+# Group LabOrder
+## List LabOrders [/api/v1/lab/orders]
+### List LabOrders [GET]
+
+View a listing of lab-orders.
+
++ Admin required.
+
++ Parameters
+    + per_page: `2` (number, optional) - Enables pagination and set items per page.
+    + include: `lab_tests` (string, optional) - Join relationship data.
+        + Members
+            + `patient`
+            + `practitioner`
+            + `lab_tests`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/lab/get-orders.json) -->
+
+## Create LabOrder [/api/v1/lab/orders]
+### Create a LabOrder [POST]
+
+Create a new lab-order. Requires Admin.
+
++ Parameters
+    + practitioner_id: `1` (number, required) - Must be a valid ID.
+    + patient_id: `1` (number, required) - Must be a valid ID.
+    + status: `shipped` (enum[string], optional) - LabOrder status.
+        + Members
+            + `canceled`
+            + `complete`
+            + `pending`
+    + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "patient_id": 16,
+            "practitioner_id": 12
+        }
+
++ Response 201 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/lab/post-orders.json) -->
+
+## Get LabOrder [/api/v1/lab/orders/1]
+### Get a LabOrder [GET]
+
+Get a lab-order by its ID.
+
++ Require Admin or current logged in User as the Patient or Practitioner of the LabOrder.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/lab/orders/get-1.json) -->
+
+## Update a LabOrder [/api/v1/lab/orders/3]
+### Update LabOrder [PATCH]
+
++ Require Admin or current logged in User as Practitioner of the LabOrder associated with this LabOrder. Additionaly, if LabOrder status is 'complete', it can't be updated.
+
++ Parameters
+    + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "shipment_code": "0342404938295",
+        }
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/lab/orders/patch-3.json) -->
+
+## Delete LabOrder [/api/v1/lab/orders/2]
+### Delete a LabOrder [DELETE]
+
++ Admin role required.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 204 (application/json)
 
 # Group Pagination
 ## Practitioners Pagination [/api/v1/practitioners?per_page=:number]

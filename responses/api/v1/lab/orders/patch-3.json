@@ -1,0 +1,16 @@
+{
+    "data": {
+        "type": "lab_orders",
+        "id": "3",
+        "attributes": {
+            "patient_id": "1",
+            "practitioner_id": "1",
+            "status": "pending",
+            "shipment_code": "0342404938295",
+            "completed_at": null
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/lab_orders/4"
+        }
+    }
+}

@@ -11,7 +11,7 @@
             "completed_at": null
         },
         "links": {
-            "self": "http://localhost:8000/api/v1/lab_tests/11"
+            "self": "http://harvey.app/api/v1/lab_tests/11"
         }
     }
 }

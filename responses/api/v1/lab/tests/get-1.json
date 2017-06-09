@@ -15,7 +15,7 @@
             }
         },
         "links": {
-            "self": "http://localhost:8000/api/v1/lab_tests/1"
+            "self": "http://harvey.app/api/v1/lab_tests/1"
         }
     }
 }

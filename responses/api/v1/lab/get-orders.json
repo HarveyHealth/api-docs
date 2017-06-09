@@ -1,0 +1,46 @@
+{
+    "data": [{
+        "type": "lab_orders",
+        "id": "1",
+        "attributes": {
+            "patient_id": "28",
+            "practitioner_id": "29",
+            "status_id": "2",
+            "shipment_code": "9785561827983",
+            "completed_at": {
+                "date": "2017-06-09 03:46:39.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            }
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/lab_orders/1"
+        }
+    }, {
+        "type": "lab_orders",
+        "id": "2",
+        "attributes": {
+            "patient_id": "34",
+            "practitioner_id": "35",
+            "status_id": "0",
+            "shipment_code": "9781186547411",
+            "completed_at": null
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/lab_orders/2"
+        }
+    }, {
+        "type": "lab_orders",
+        "id": "3",
+        "attributes": {
+            "patient_id": "35",
+            "practitioner_id": "36",
+            "status_id": "0",
+            "shipment_code": "9796629399748",
+            "completed_at": null
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/lab_orders/3"
+        }
+    }]
+}

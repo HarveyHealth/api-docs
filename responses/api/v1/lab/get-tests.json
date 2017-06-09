@@ -11,7 +11,7 @@
             "completed_at": null
         },
         "links": {
-            "self": "http://localhost:8000/api/v1/lab_tests/1"
+            "self": "http://harvey.app/api/v1/lab_tests/1"
         }
     }, {
         "type": "lab_tests",
@@ -29,7 +29,7 @@
             }
         },
         "links": {
-            "self": "http://localhost:8000/api/v1/lab_tests/2"
+            "self": "http://harvey.app/api/v1/lab_tests/2"
         }
     }, {
         "type": "lab_tests",
@@ -43,7 +43,7 @@
             "completed_at": null
         },
         "links": {
-            "self": "http://localhost:8000/api/v1/lab_tests/3"
+            "self": "http://harvey.app/api/v1/lab_tests/3"
         }
     }]
 }
