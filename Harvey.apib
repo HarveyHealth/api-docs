@@ -385,13 +385,13 @@ Upload PDF file for test results.
 ## List Messages [/api/v1/messages]
 ### List Messages [GET]
 
-View a listing of messages associated to the authorized user (Admin role can get any message).
+View a listing of messages associated to the authorized user (Admin role can get any message by using 'recipient_user_id' parameter).
 
 + Parameters
     + filter: `unread` (string, optional) - Set a filter for messages
         + Members
             + `unread`
-    + recipient_user_id: `3` (number, optional) - Get messages for an specific recipient, only Admin can set this parameter. For non-admins this value will be automatically set to the current logged in user_id.
+    + recipient_user_id: `3` (number, optional) - Get messages for an specific recipient, only Admin can set this parameter. This value will be automatically set to the current logged in user_id.
     + sender_user_id: `3` (number, optional) - Get messages by an specific sender.
     + term: `medicine` (string, optional) - Filter results looking for string inside message body.
     + per_page: `3` (number, optional) - Enables pagination and set items per page.
@@ -452,8 +452,8 @@ View details of a specific message.
 
 + Parameters
     + recipient_user_id: `9` (number, required) - Recipient, must be a valid ID.
-    + message: `Hi there!` (string, required) - Message body.
-    + subject: `Hello` (string, required) - Message subject.
+    + message: `Hi there!` (string, optional) - Message body.
+    + subject: `Hello` (string, optional) - Message subject.
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
@@ -463,7 +463,7 @@ View details of a specific message.
         {
             "recipient_user_id": 9,
             "message": "Hi there!",
-            "subject": "Hello"
+            "subject": "This is the subject..."
         }
 + Response 201 (application/json)
     + Headers

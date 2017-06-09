@@ -7,6 +7,10 @@
         "sender_user_id": "1",
         "recipient_user_id": "9",
         "is_sender_admin": false,
+        "recipient_full_name": "John Doe",
+        "recipient_image_url": "/images/users/4d186321c1a7f0f354b297e8914ab240.png",
+        "sender_full_name": "Willy Wonka",
+        "sender_image_url": "/images/users/2e80a184267270fc8a50f3f9aef3902e.png",
         "read_at": null,
         "created_at": {
             "date": "2017-05-23 13:53:00.000000",

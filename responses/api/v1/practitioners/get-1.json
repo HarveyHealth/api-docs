@@ -4,7 +4,8 @@
         "id": "1",
         "attributes": {
             "name": "Camila Goodwin",
-            "type_name": "Naturopathic Doctor"
+            "type_name": "Naturopathic Doctor",
+            "user_id": 3
         },
         "links": {
             "self": "http://harvey.app/api/v1/practitioner/1"
