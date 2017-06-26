@@ -3,12 +3,15 @@
         "type": "users",
         "id": "1",
         "attributes": {
+        "address_1" : "Test Address 1234",
+        "address_2" : null,
             "email": "admin@goharvey.com",
             "first_name": "Katlynn",
             "gender": null,
             "image_url": "/images/default_user_image.png",
             "last_name": "Nikolaus",
             "phone": "3101234567",
+            "state": "CA",
             "user_type": "admin",
             "zip": "76496"
         },
@@ -19,12 +22,15 @@
         "type": "users",
         "id": "2",
         "attributes": {
+        "address_1" : "Test Address 1235",
+        "address_2" : null,
             "email": "patient@goharvey.com",
             "first_name": "Roxanne",
             "gender": null,
             "image_url": "/images/default_user_image.png",
             "last_name": "Predovic",
             "phone": "3101234568",
+            "state": "CA",
             "user_type": "patient",
             "zip": "37195-4579"
         },
@@ -35,12 +41,15 @@
         "type": "users",
         "id": "3",
         "attributes": {
+        "address_1" : "Test Address 1236",
+        "address_2" : null,
             "email": "practitioner@goharvey.com",
             "first_name": "Osvaldo",
             "gender": null,
             "image_url": "/images/default_user_image.png",
             "last_name": "Eichmann",
             "phone": "3101234569",
+            "state": "CA",
             "user_type": "practitioner",
             "zip": "81510"
         },

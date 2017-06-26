@@ -3,12 +3,15 @@
     "type": "users",
     "id": "3",
     "attributes": {
+      "address_1" : "Test Address 1234",
+      "address_2" : null,
       "email": "patient@goharvey.com",
       "first_name": "Jessika",
       "gender": null,
       "image_url": "/images/default_user_image.png",
       "last_name": "Lowe",
       "phone": "3101234568",
+      "state": "CA",
       "user_type": "patient",
       "zip": 90401
     },
