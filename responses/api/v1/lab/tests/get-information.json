@@ -11,9 +11,6 @@
             "price": "299.00",
             "quote": "Did you know that 9 out of 10 Americans are potassium deficient, 8 out of 10 are vitamin E deficient, 7 out of 10 are calcium deficient, 50% are deficient in vitamin A, vitamin C and magnesium, and 90% of people of color in America are deficient in vitamin D.",
             "sample": "Blood draw"
-        },
-        "links": {
-            "self": "http://harvey.app/api/v1/lab_tests/1"
         }
     }, {
         "type": "lab_tests",
@@ -27,9 +24,6 @@
             "price": "99.00",
             "quote": "As women enter menopausal years, their bodies' production of estrogen and other hormones needed to maintain youthful vitality rapidly declines. Continual assessment of hormone levels is necessary for women seeking to maintain a healthy hormonal balance.",
             "sample": "Blood draw"
-        },
-        "links": {
-            "self": "http://harvey.app/api/v1/lab_tests/2"
         }
     }, {
         "type": "lab_tests",
@@ -43,9 +37,6 @@
             "price": "125.00",
             "quote": "Are you always tired, anxious, irritable, have body aches, or need caffeine to achieve a basic functioning level in the morning? It may be a result of a hormone imbalance.",
             "sample": "Saliva"
-        },
-        "links": {
-            "self": "http://harvey.app/api/v1/lab_tests/3"
         }
     }]
 }
