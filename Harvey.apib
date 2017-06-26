@@ -648,9 +648,11 @@ View a listing of lab-orders.
     + per_page: `2` (number, optional) - Enables pagination and set items per page.
     + include: `lab_tests` (string, optional) - Join relationship data.
         + Members
-            + `patient`
-            + `practitioner`
             + `lab_tests`
+            + `patient,user`
+            + `patient`
+            + `practitioner,user`
+            + `practitioner`
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
@@ -699,6 +701,14 @@ Get a lab-order by its ID.
 
 + Require Admin or current logged in User as the Patient or Practitioner of the LabOrder.
 
++ Parameters
+    + include: `lab_tests` (string, optional) - Join relationship data.
+        + Members
+            + `lab_tests`
+            + `patient,user`
+            + `patient`
+            + `practitioner,user`
+            + `practitioner`
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
