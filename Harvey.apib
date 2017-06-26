@@ -531,6 +531,7 @@ View a listing of lab-tests.
             + `patient`
             + `practitioner`
             + `lab_order`
+            + `sku`
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
@@ -740,6 +741,25 @@ Get a lab-order by its ID.
         X-Requested-With: XMLHttpRequest
         Content-Type: application/json
 + Response 204 (application/json)
+
+# Group LabTests Information
+## List LabTests Information [/api/v1/lab/tests/information]
+### Get LabTests information [GET]
+
+Get a list of the current Lab Tests we offer.
+
++ No auth required.
+
++ Parameters
+    + per_page: `2` (number, optional) - Enables pagination and set items per page.
++ Request
+    + Headers
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/lab/tests/get-information.json) -->
 
 # Group Pagination
 ## Practitioners Pagination [/api/v1/practitioners?per_page=:number]
