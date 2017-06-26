@@ -207,8 +207,8 @@ View details of a specific appointment.
 + No special role required.
 
 + Parameters
-    + appointment_at: `2019-03-01 15:30:00` (string, required) - UTC, format "Y-m-d H:i:s", must be in the future.
-    + reason_for_visit: `Why not?` (string, required)
+    + appointment_at: `2019-03-01 15:30:00` (string, required) - UTC, format "Y-m-d H:i:s", must be in the future and before 4 weeks. Practitioner must be available at that time.
+    + reason_for_visit: `Why not?` (string, required) - Reason for visit.
     + practitioner_id: `1` (number, optional) - Required if admin or patient. Must be a valid ID.
     + patient_id: `1` (number, optional) - Required if admin or practitioner. Must be a valid ID.
 + Request
@@ -227,6 +227,40 @@ View details of a specific appointment.
     + Headers
     + Body
         <!-- include(responses/api/v1/post-appointments.json) -->
+
+## Update Appointment [/api/v1/appointments/1]
+### Update Appointment [PATCH]
+
++ Require at least one of these conditions for current logged in user:
+    + Admin role
+    + Practitioner of the Appointment.
+    + Patient of the Appointment, and Appointment status = 'pending', and Appointment start_time more than 4 hours from now.
+
++ Parameters
+    + appointment_at: `2019-03-01 15:30:00` (string, optional) - UTC, format "Y-m-d H:i:s". If present, must be in the future and before 4 weeks. Practitioner must be available at that time.
+    + reason_for_visit: `Why not?` (string, optional) - Reason for visit.
+    + status: `complete` (enum[string], optional) - Appointment status.
+        + Members
+            + `canceled`
+            + `complete`
+            + `general_conflict`
+            + `no_show_doctor`
+            + `no_show_patient`
+            + `pending`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "reason_for_visit": "Some reason.",
+            "status": 'no_show_doctor'
+        }
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/appointments/patch-1.json) -->
 
 # Group Patient
 ## List Patients [/api/v1/patients]

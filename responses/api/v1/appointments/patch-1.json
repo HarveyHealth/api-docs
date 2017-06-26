@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "appointments",
+    "id": "1",
+    "attributes": {
+      "appointment_at": {
+        "date": "2017-03-21 09:21:51.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      },
+      "patient_id": 1,
+      "practitioner_id": 5,
+      "practitioner_name": "Adele Turner",
+      "reason_for_visit": "Some reason.",
+      "status": "no_show_doctor"
+    },
+    "links": {
+      "self": "http://harvey.app/api/v1/appointments/1"
+    }
+  }
+}
