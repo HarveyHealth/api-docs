@@ -3,6 +3,11 @@
         "type": "lab_orders",
         "id": "6",
         "attributes": {
+            "address_1": "Address 1234",
+            "address_2": null,
+            "city": "Los Angeles",
+            "state": "CA",
+            "zip": "90401",
             "patient_id": "12",
             "practitioner_id": "16",
             "status": "pending",
