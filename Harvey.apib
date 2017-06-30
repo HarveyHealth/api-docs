@@ -671,11 +671,15 @@ Create a new lab-order. Requires Admin.
 + Parameters
     + practitioner_id: `1` (number, required) - Must be a valid ID.
     + patient_id: `1` (number, required) - Must be a valid ID.
-    + status: `shipped` (enum[string], optional) - LabOrder status.
+    + status: `pending` (enum[string], optional) - LabOrder status.
         + Members
             + `canceled`
             + `complete`
+            + `mailed`
             + `pending`
+            + `processing`
+            + `received`
+            + `shipped`
     + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
     + address_1: `Address 1234` (string, required) - Any string, 100 characters max.
     + address_2: `More address` (string, optional) - Any string, 100 characters max.
