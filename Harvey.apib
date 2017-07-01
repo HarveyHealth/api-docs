@@ -554,11 +554,13 @@ Create a new lab-test. Since any lab test belongs to one lab order, you need to 
         + Members
             + `canceled`
             + `complete`
+            + `confirmed`
             + `mailed`
-            + `pending`
             + `processing`
             + `received`
+            + `recommended`
             + `shipped`
+        + default: 'recommended'
     + results_url: `goharvey.com/lab/tests/1234` (string, optional) - If present, must be a valid URL.
     + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
 
@@ -605,10 +607,11 @@ Get a lab-test by its ID.
         + Members
             + `canceled`
             + `complete`
+            + `confirmed`
             + `mailed`
-            + `pending`
             + `processing`
             + `received`
+            + `recommended`
             + `shipped`
 + Request
     + Headers
@@ -675,11 +678,13 @@ Create a new lab-order. Requires Admin.
         + Members
             + `canceled`
             + `complete`
+            + `confirmed`
             + `mailed`
-            + `pending`
             + `processing`
             + `received`
+            + `recommended`
             + `shipped`
+        + default: 'recommended'
     + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
     + address_1: `Address 1234` (string, required) - Any string, 100 characters max.
     + address_2: `More address` (string, optional) - Any string, 100 characters max.
