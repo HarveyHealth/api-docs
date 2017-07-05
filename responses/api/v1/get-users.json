@@ -3,17 +3,36 @@
         "type": "users",
         "id": "1",
         "attributes": {
-        "address_1" : "Test Address 1234",
-        "address_2" : null,
+            "address_1": "Some Random Address 123",
+            "address_2": null,
+            "city": "East Santa",
+            "created_at": {
+                "date": "2017-07-04 02:38:07.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "doctor_name": null,
             "email": "admin@goharvey.com",
-            "first_name": "Katlynn",
+            "email_verified_at": {
+                "date": "2017-07-04 02:38:07.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "first_name": "Salma",
             "gender": null,
+            "has_an_appointment": false,
             "image_url": "/images/default_user_image.png",
-            "last_name": "Nikolaus",
+            "last_name": "Smitham",
             "phone": "3101234567",
+            "phone_verified_at": {
+                "date": "2017-07-04 02:38:07.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
             "state": "CA",
+            "terms_accepted_at": null,
             "user_type": "admin",
-            "zip": "76496"
+            "zip": "16638-7700"
         },
         "links": {
             "self": "http://harvey.app/api/v1/users/1"
@@ -22,39 +41,39 @@
         "type": "users",
         "id": "2",
         "attributes": {
-        "address_1" : "Test Address 1235",
-        "address_2" : null,
+            "address_1": "Some Random Address 123",
+            "address_2": null,
+            "city": "East Ephraim",
+            "created_at": {
+                "date": "2017-07-04 02:38:07.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "doctor_name": "Darion McDermott",
             "email": "patient@goharvey.com",
-            "first_name": "Roxanne",
+            "email_verified_at": {
+                "date": "2017-07-04 02:38:07.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "first_name": "Crawford",
             "gender": null,
+            "has_an_appointment": true,
             "image_url": "/images/default_user_image.png",
-            "last_name": "Predovic",
+            "last_name": "Toy",
             "phone": "3101234568",
+            "phone_verified_at": {
+                "date": "2017-07-04 02:38:07.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
             "state": "CA",
+            "terms_accepted_at": null,
             "user_type": "patient",
-            "zip": "37195-4579"
+            "zip": "30202-1204"
         },
         "links": {
             "self": "http://harvey.app/api/v1/users/2"
-        }
-    }, {
-        "type": "users",
-        "id": "3",
-        "attributes": {
-        "address_1" : "Test Address 1236",
-        "address_2" : null,
-            "email": "practitioner@goharvey.com",
-            "first_name": "Osvaldo",
-            "gender": null,
-            "image_url": "/images/default_user_image.png",
-            "last_name": "Eichmann",
-            "phone": "3101234569",
-            "state": "CA",
-            "user_type": "practitioner",
-            "zip": "81510"
-        },
-        "links": {
-            "self": "http://harvey.app/api/v1/users/3"
         }
     }]
 }

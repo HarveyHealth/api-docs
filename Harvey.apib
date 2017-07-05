@@ -74,6 +74,15 @@ View a listing of enabled users.
         + Members
             + `patient`
             + `practitioner`
+    + order: `created_at|desc` (string, optional) - Sets a column to sort by and an optional direction ('asc', 'desc') by using `|` after column name.
+        + Members
+            + `id`
+            + `created_at`
+            + `email`
+            + `first_name`
+            + `last_name`
+            + `terms_accepted_at`
+
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
@@ -122,6 +131,11 @@ Get a user by their ID.
 
 + Require Admin or current logged in user_id matching request.
 
++ Parameters
+    + include: `practitioner` (string, optional) - Join relationship data. Param 'extra' will bring additional user information.
+        + Members
+            + `patient`
+            + `practitioner`
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
@@ -149,6 +163,10 @@ Get a user by their ID.
         Authorization: Bearer {{ ACCESS_TOKEN }}
         X-Requested-With: XMLHttpRequest
         Content-Type: application/json
+    + Body
+        {
+            "address_1": "Test Address 1234"
+        }
 + Response 200 (application/json)
     + Headers
     + Body
