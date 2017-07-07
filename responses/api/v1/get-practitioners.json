@@ -3,9 +3,22 @@
         "type": "practitioner",
         "id": "1",
         "attributes": {
+            "background_picture_url": "//someserver.com/somefolder/somefile.png",
+            "description": "Earum incidunt qui quos quod officiis. Laboriosam temporibus enim aut quaerat aut ad. Perspiciatis aliquid error cupiditate quod commodi non.",
+            "graduated_at": {
+                "date": "2012-07-07 00:00:00.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "license_title": "DO",
+            "license_number": "414",
+            "license_state": "California",
             "name": "Camila Goodwin",
+            "picture_url": "//someserver.com/somefolder/somefile.png",
+            "school": "nemo repellendus corrupti",
+            "specialty": "[\"et\", \"Manager of Food Preparation\"]",
             "type_name": "Naturopathic Doctor",
-            "user_id": 3
+            "user_id": "3"
         },
         "links": {
             "self": "http://harvey.app/api/v1/practitioner/1"
@@ -14,9 +27,22 @@
         "type": "practitioner",
         "id": "2",
         "attributes": {
+            "background_picture_url": "//someserver.com/somefolder/somefile.png",
+            "description": "Earum incidunt qui quos quod officiis. Laboriosam temporibus enim aut quaerat aut ad. Perspiciatis aliquid error cupiditate quod commodi non.",
+            "graduated_at": {
+                "date": "2012-07-07 00:00:00.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "license_title": "DO",
+            "license_number": "414",
+            "license_state": "California",
             "name": "Dudley Fay",
+            "picture_url": "//someserver.com/somefolder/somefile.png",
+            "school": "nemo repellendus corrupti",
+            "specialty": "[\"et\", \"Manager of Food Preparation\"]",
             "type_name": "Short Order Cook",
-            "user_id": 4
+            "user_id": "4"
         },
         "links": {
             "self": "http://harvey.app/api/v1/practitioner/2"
@@ -25,9 +51,22 @@
         "type": "practitioner",
         "id": "3",
         "attributes": {
+            "background_picture_url": "//someserver.com/somefolder/somefile.png",
+            "description": "Earum incidunt qui quos quod officiis. Laboriosam temporibus enim aut quaerat aut ad. Perspiciatis aliquid error cupiditate quod commodi non.",
+            "graduated_at": {
+                "date": "2012-07-07 00:00:00.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "license_title": "DO",
+            "license_number": "414",
+            "license_state": "California",
             "name": "Karolann Mante",
+            "picture_url": "//someserver.com/somefolder/somefile.png",
+            "school": "nemo repellendus corrupti",
+            "specialty": "[\"et\", \"Manager of Food Preparation\"]",
             "type_name": "Naturopathic Doctor",
-            "user_id": 5
+            "user_id": "5"
         },
         "links": {
             "self": "http://harvey.app/api/v1/practitioner/3"

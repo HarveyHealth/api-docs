@@ -3,9 +3,22 @@
         "type": "practitioner",
         "id": "1",
         "attributes": {
-            "name": "Camila Goodwin",
-            "type_name": "Naturopathic Doctor",
-            "user_id": 3
+            "background_picture_url": "//someserver.com/somefolder/somefile.png",
+            "description": "Earum incidunt qui quos quod officiis. Laboriosam temporibus enim aut quaerat aut ad. Perspiciatis aliquid error cupiditate quod commodi non.",
+            "graduated_at": {
+                "date": "2012-07-07 00:00:00.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "license_title": "DO",
+            "license_number": "414",
+            "license_state": "California",
+            "name": "Presley Cole",
+            "picture_url": "//someserver.com/somefolder/somefile.png",
+            "school": "nemo repellendus corrupti",
+            "specialty": "[\"et\", \"Manager of Food Preparation\"]",
+            "type_name": "Insurance Underwriter",
+            "user_id": "3"
         },
         "links": {
             "self": "http://harvey.app/api/v1/practitioner/1"
