@@ -16,7 +16,7 @@
             "name": "Presley Cole",
             "picture_url": "//someserver.com/somefolder/somefile.png",
             "school": "nemo repellendus corrupti",
-            "specialty": "[\"et\", \"Manager of Food Preparation\"]",
+            "specialty": "[\"Specialty One\", \"Another Specialty\"]",
             "type_name": "Insurance Underwriter",
             "user_id": "3"
         },

@@ -16,7 +16,7 @@
             "name": "Camila Goodwin",
             "picture_url": "//someserver.com/somefolder/somefile.png",
             "school": "nemo repellendus corrupti",
-            "specialty": "[\"et\", \"Manager of Food Preparation\"]",
+            "specialty": "[\"Specialty One\", \"Another Specialty\"]",
             "type_name": "Naturopathic Doctor",
             "user_id": "3"
         },
@@ -40,7 +40,7 @@
             "name": "Dudley Fay",
             "picture_url": "//someserver.com/somefolder/somefile.png",
             "school": "nemo repellendus corrupti",
-            "specialty": "[\"et\", \"Manager of Food Preparation\"]",
+            "specialty": "[\"Specialty One\", \"Another Specialty\"]",
             "type_name": "Short Order Cook",
             "user_id": "4"
         },
@@ -64,7 +64,7 @@
             "name": "Karolann Mante",
             "picture_url": "//someserver.com/somefolder/somefile.png",
             "school": "nemo repellendus corrupti",
-            "specialty": "[\"et\", \"Manager of Food Preparation\"]",
+            "specialty": "[\"Specialty One\", \"Another Specialty\"]",
             "type_name": "Naturopathic Doctor",
             "user_id": "5"
         },
