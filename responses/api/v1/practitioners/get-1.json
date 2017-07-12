@@ -5,16 +5,13 @@
         "attributes": {
             "background_picture_url": "//someserver.com/somefolder/somefile.png",
             "description": "Earum incidunt qui quos quod officiis. Laboriosam temporibus enim aut quaerat aut ad. Perspiciatis aliquid error cupiditate quod commodi non.",
-            "graduated_at": {
-                "date": "2012-07-07 00:00:00.000000",
-                "timezone_type": 3,
-                "timezone": "UTC"
-            },
+            "graduated_year": "1991",
             "license_title": "DO",
             "license_number": "414",
             "license_state": "California",
             "name": "Presley Cole",
             "picture_url": "//someserver.com/somefolder/somefile.png",
+            "rate": "150.00",
             "school": "nemo repellendus corrupti",
             "specialty": "[\"Specialty One\", \"Another Specialty\"]",
             "type_name": "Insurance Underwriter",
