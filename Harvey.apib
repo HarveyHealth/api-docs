@@ -172,6 +172,65 @@ Get a user by their ID.
     + Body
         <!-- include(responses/api/v1/users/patch-3.json) -->
 
+
+## List Stripe Credit Cards [/api/v1/users/1/cards]
+### List Credit Cards [GET]
+
+View a listing of credit cards associated to current user.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(responses/api/v1/users/1/get-cards.json) -->
+
+## Add Stripe Credit Card [/api/v1/users/1/cards]
+### Add Credit Card [POST]
+
+Associates a Credit Card with User's Stripe account.
+If User is not an Stripe Customer yet, a new account will be created and associated.
+
++ Parameters
+    + id: `tok_abc...xyz` (string, required) - Credit Card Stripe token.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "id": "tok_1AjwNDHyZ2p8GwQJxcUKLHJn"
+        }
++ Response 201 (application/json)
+    + Headers
+    + Body
+
+## Delete Stripe Credit Card [/api/v1/users/1/cards]
+### Delete Credit Card [DELETE]
+
+Deletes a Credit Card from Stripe User account.
+Note this endpoint uses Card ID as parameter, not Card Token ID.
+Card ID starts with 'card_'.
+
++ Parameters
+    + card_id: (string, required) - Credit Card Stripe ID.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "card_id": "card_1AjwNDHyZ2p8GwQJ7AZnjxWf"
+        }
++ Response 204 (application/json)
+
 # Group Appointment
 ## List Appointments [/api/v1/appointments]
 

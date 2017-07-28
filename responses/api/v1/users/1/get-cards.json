@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": "card_1AkSPgl0YnhBhwmvEBEcbDQn",
+      "object": "card",
+      "address_city": null,
+      "address_country": null,
+      "address_line1": null,
+      "address_line1_check": null,
+      "address_line2": null,
+      "address_state": null,
+      "address_zip": null,
+      "address_zip_check": null,
+      "brand": "Visa",
+      "country": "US",
+      "customer": null,
+      "cvc_check": null,
+      "dynamic_last4": null,
+      "exp_month": 2,
+      "exp_year": 2021,
+      "fingerprint": "o9IWZnfsa43fGsdo",
+      "funding": "credit",
+      "last4": "5332",
+      "metadata": {
+        "harvey_id": 1
+      },
+      "name": null,
+      "tokenization_method": null
+    },
+    {
+      "id": "card_1AkYnhEBEcbDQSPgl0nDJUN9",
+      "object": "card",
+      "address_city": null,
+      "address_country": null,
+      "address_line1": null,
+      "address_line1_check": null,
+      "address_line2": null,
+      "address_state": null,
+      "address_zip": null,
+      "address_zip_check": null,
+      "brand": "Visa",
+      "country": "US",
+      "customer": null,
+      "cvc_check": null,
+      "dynamic_last4": null,
+      "exp_month": 8,
+      "exp_year": 2018,
+      "fingerprint": "o9IWZnfaANV6Qg41",
+      "funding": "credit",
+      "last4": "4242",
+      "metadata": {
+        "harvey_id": 1
+      },
+      "name": null,
+      "tokenization_method": null
+    }
+  ]
+}
+
+
