@@ -210,11 +210,44 @@ If User is not an Stripe Customer yet, a new account will be created and associa
     + Headers
     + Body
 
+## Update Stripe Credit Card [/api/v1/users/1/cards]
+### Update Credit Card [PATCH]
+
+Updates a Credit Card associated with User's Stripe account.
+Notice this endpoint uses Card ID as parameter, not Card Token ID.
+Card ID starts with 'card_'.
+
++ Parameters
+    + card_id: (string, required) - Credit Card Stripe ID.
+    + address_city: `Los Angeles` (string, optional)
+    + address_country: `US` (string, optional)
+    + address_line1: (string, optional)
+    + address_line2: (string, optional)
+    + address_state: `CA` (string, optional)
+    + address_zip: `90401` (string, optional)
+    + exp_month: `7` (number, optional)
+    + exp_year: `2021` (number, optional)
+    + name: `Elizabeth Anderson` (string, optional)
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "card_id": "card_1As0VxEBEcbDQSPgOisW4Tz7",
+            "name": "Elizabeth Anderson"
+        }
++ Response 200 (application/json)
+    + Headers
+    + Body
+
 ## Delete Stripe Credit Card [/api/v1/users/1/cards]
 ### Delete Credit Card [DELETE]
 
 Deletes a Credit Card from Stripe User account.
-Note this endpoint uses Card ID as parameter, not Card Token ID.
+Notice this endpoint uses Card ID as parameter, not Card Token ID.
 Card ID starts with 'card_'.
 
 + Parameters
