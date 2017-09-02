@@ -3,19 +3,57 @@
         "type": "lab_orders",
         "id": "1",
         "attributes": {
-            "address_1": "Address 1234",
+            "address_1": "32885 Leannon Path",
             "address_2": null,
-            "city": "Los Angeles",
+            "city": "North Bryana",
+            "completed_at": null,
+            "created_at": {
+                "date": "2017-09-01 04:41:14.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "patient_id": "28",
+            "practitioner_id": "29",
+            "shipment_code": "9798690000783",
             "state": "CA",
-            "zip": "90401",
-            "patient_id": "2",
-            "practitioner_id": "6",
-            "status": "pending",
-            "shipment_code": "",
-            "completed_at": null
+            "status": "recommended",
+            "zip": "04085-2087"
         },
         "links": {
             "self": "http://harvey.app/api/v1/lab_orders/1"
+        },
+        "relationships": {
+            "invoice": {
+                "links": {
+                    "self": "http://harvey.app/api/v1/lab_orders/1/relationships/invoice",
+                    "related": "http://harvey.app/api/v1/lab_orders/1/invoice"
+                },
+                "data": {
+                    "type": "invoices",
+                    "id": "1"
+                }
+            }
         }
-    }
+    },
+    "included": [{
+        "type": "invoices",
+        "id": "1",
+        "attributes": {
+            "amount": "140.00",
+            "card_brand": "Visa",
+            "card_last_four": "4242",
+            "description": "Lab Tests order #1 on 9/1/2017",
+            "discount": "10.50",
+            "paid_on": {
+                "date": "2017-10-10 12:00:00.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "status": "paid",
+            "subtotal": "150.50"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/invoices/1"
+        }
+    }]
 }

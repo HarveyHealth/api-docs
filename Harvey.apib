@@ -243,7 +243,7 @@ Card ID starts with 'card_'.
     + Headers
     + Body
 
-## Delete Stripe Credit Card [/api/v1/users/1/cards]
+## Delete Stripe Credit Card [/api/v1/users/{user_id}/cards/{card_id}]
 ### Delete Credit Card [DELETE]
 
 Deletes a Credit Card from Stripe User account.
@@ -251,17 +251,14 @@ Notice this endpoint uses Card ID as parameter, not Card Token ID.
 Card ID starts with 'card_'.
 
 + Parameters
-    + card_id: (string, required) - Credit Card Stripe ID.
-
+    + user_id: `1` (number, required) - Must be a valid ID.
+    + card_id: `card-1AjwNDHyZ2p8GwQJ7AZnjxWf` (string, required) - Credit Card Stripe ID.
+#    + card_id: `card_1AjwNDHyZ2p8GwQJ7AZnjxWf` (string, required) - Credit Card Stripe ID.
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
         X-Requested-With: XMLHttpRequest
         Content-Type: application/json
-    + Body
-        {
-            "card_id": "card_1AjwNDHyZ2p8GwQJ7AZnjxWf"
-        }
 + Response 204 (application/json)
 
 # Group Appointment
@@ -766,6 +763,7 @@ View a listing of lab-orders.
             + `patient`
             + `practitioner,user`
             + `practitioner`
+            + `invoice`
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
@@ -818,7 +816,7 @@ Create a new lab-order. Requires Admin.
     + Body
         <!-- include(responses/api/v1/lab/post-orders.json) -->
 
-## Get LabOrder [/api/v1/lab/orders/1]
+## Get LabOrder [/api/v1/lab/orders/1?include=invoice]
 ### Get a LabOrder [GET]
 
 Get a lab-order by its ID.
@@ -833,6 +831,7 @@ Get a lab-order by its ID.
             + `patient`
             + `practitioner,user`
             + `practitioner`
+            + `invoice`
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
