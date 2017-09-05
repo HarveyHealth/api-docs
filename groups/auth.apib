@@ -1,0 +1,23 @@
+# Group Auth
+## Generate Auth Tokens [/oauth/token]
+### Generate Auth Tokens [POST]
+
+Get access token and refresh token for a specific user.
+Client id and client secret must be provided by a Harvey administrator.
+
++ Request Example
+    + Headers
+        Content-Type: application/json
+    + Body
+        {
+            "grant_type": "password",
+            "client_id": 1,
+            "client_secret": "0mUktabHH9evbtfoJ3Fyf9EYJ90jbVBeAMArZfsD",
+            "username": "patient@goharvey.com",
+            "password": "secret",
+            "scope": "*"
+        }
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/oauth/post-token.json) -->

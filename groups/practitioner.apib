@@ -1,0 +1,42 @@
+# Group Practitioner
+## List Practitioners [/api/v1/practitioners]
+### List Practitioners [GET]
+
+View a listing of enabled practitioners.
+
++ No special role required.
+
++ Parameters
+    + per_page: `3` (number, optional) - Enables pagination and set items per page.
+    + include: `user` (string, optional) - Join relationship data (Admin or Practitioner role required).
+        + Members
+            + `user`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/get-practitioners.json) -->
+
+## Get Practitioner [/api/v1/practitioners/1?include=availability]
+### Get Practitioner [GET]
+
++ No special role required.
+
++ Parameters
+    + include: `availability` (string, optional) - Join Practitioner availability and/or User relationship (comma-separated).
+        + Members
+            + `availability`
+            + `user`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/practitioners/get-1.json) -->

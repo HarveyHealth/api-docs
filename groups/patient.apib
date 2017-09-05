@@ -1,0 +1,72 @@
+# Group Patient
+## List Patients [/api/v1/patients]
+### List Patients [GET]
+
+View a listing of enabled patients.
+
++ Admin or Practitioner required.
+
++ Parameters
+    + per_page: `3` (number, optional) - Enables pagination and set items per page.
+    + include: `appointments` (string, optional) - Join relationship data.
+        + Members
+            + `user`
+            + `appointments`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/get-patients.json) -->
+
+## Get Patient [/api/v1/patients/1]
+### Get Patient [GET]
+
++ Require Admin or current logged in patient_id matching request.
+
++ Parameters
+    + include: `user` (string, optional) - Join relationship data.
+        + Members
+            + `user`
+            + `appointments`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/patients/get-1.json) -->
+
+## Update Patient [/api/v1/patients/1]
+### Update Patient [PATCH]
+
+Update a patient&#39;s information.
+
++ Require Admin or current logged in patient_id matching request.
+
++ Parameters
+    + birthdate: `1982-11-01` (string, optional) - "Y-m-d" format.
+    + height_inches: `3` (number, optional) - Must be integer.
+    + height_feet: `5` (number, optional) - Must be integer.
+    + weight: `120` (number, optional) - Must be integer.
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "birthdate": "1984-12-19",
+            "height_feet": 6,
+            "height_inches": 1,
+            "weight": 210
+        }
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/patients/patch-1.json) -->

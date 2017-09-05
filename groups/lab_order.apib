@@ -1,0 +1,133 @@
+# Group LabOrder
+## List LabOrders [/api/v1/lab/orders]
+### List LabOrders [GET]
+
+View a listing of lab-orders.
+
++ No special role required.
+
++ Parameters
+    + per_page: `2` (number, optional) - Enables pagination and set items per page.
+    + include: `lab_tests` (string, optional) - Join relationship data.
+        + Members
+            + `lab_tests`
+            + `patient,user`
+            + `patient`
+            + `practitioner,user`
+            + `practitioner`
+            + `invoice`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/lab/get-orders.json) -->
+
+## Create LabOrder [/api/v1/lab/orders]
+### Create a LabOrder [POST]
+
+Create a new lab-order. Requires Admin.
+
++ Parameters
+    + practitioner_id: `1` (number, required) - Must be a valid ID.
+    + patient_id: `1` (number, required) - Must be a valid ID.
+    + status: `pending` (enum[string], optional) - LabOrder status.
+        + Members
+            + `canceled`
+            + `complete`
+            + `confirmed`
+            + `mailed`
+            + `processing`
+            + `received`
+            + `recommended`
+            + `shipped`
+        + default: 'recommended'
+    + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
+    + address_1: `Address 1234` (string, required) - Any string, 100 characters max.
+    + address_2: `More address` (string, optional) - Any string, 100 characters max.
+    + city: `Los Angeles` (string, required) - Any string, 100 characters max.
+    + state: `CA` (string, required) - Any string, 2 characters max.
+    + zip: `90401` (number, required) - Must be a serviceable zip. 5 digits max.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "patient_id": 16,
+            "practitioner_id": 12
+        }
+
++ Response 201 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/lab/post-orders.json) -->
+
+## Get LabOrder [/api/v1/lab/orders/1?include=invoice]
+### Get a LabOrder [GET]
+
+Get a lab-order by its ID.
+
++ Require Admin or current logged in User as the Patient or Practitioner of the LabOrder.
+
++ Parameters
+    + include: `lab_tests` (string, optional) - Join relationship data.
+        + Members
+            + `lab_tests`
+            + `patient,user`
+            + `patient`
+            + `practitioner,user`
+            + `practitioner`
+            + `invoice`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/lab/orders/get-1.json) -->
+
+## Update a LabOrder [/api/v1/lab/orders/3]
+### Update LabOrder [PATCH]
+
++ Require Admin or current logged in User as Practitioner of the LabOrder associated with this LabOrder. Additionaly, if LabOrder status is 'complete', it can't be updated.
+
++ Parameters
+    + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
+    + address_1: `Address 1234` (string, optional) - Any string, 100 characters max.
+    + address_2: `More address` (string, optional) - Any string, 100 characters max.
+    + city: `Los Angeles` (string, optional) - Any string, 100 characters max.
+    + state: `CA` (string, optional) - Any string, 2 characters max.
+    + zip: `90401` (number, optional) - Must be a serviceable zip. 5 digits max.
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+    + Body
+        {
+            "shipment_code": "0342404938295",
+        }
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/lab/orders/patch-3.json) -->
+
+## Delete LabOrder [/api/v1/lab/orders/2]
+### Delete a LabOrder [DELETE]
+
++ Admin role required.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 204 (application/json)

@@ -1,0 +1,17 @@
+# Group Error
+## Errors Responses [/]
+All Error responses will return an appropriate status code along with a body containing an array of error objects with a key of `errors`.
+
+Each error object contains a `title`, `type`, and `detail`.
+
+```json
+{
+    "errors": [
+        {
+            "title": "Unauthenticated.",
+            "type": "about:blank",
+            "detail": "You do not have access to modify the user with id 1."
+        }
+    ]
+}
+```
