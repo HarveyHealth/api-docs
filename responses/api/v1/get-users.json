@@ -5,6 +5,8 @@
         "attributes": {
             "address_1": "Some Random Address 123",
             "address_2": null,
+            "card_brand": "Visa",
+            "card_last4": "9348",
             "city": "East Santa",
             "created_at": {
                 "date": "2017-07-04 02:38:07.000000",
@@ -20,7 +22,8 @@
             },
             "first_name": "Salma",
             "gender": null,
-            "has_booked_an_appointment": false,
+            "has_a_card": true,
+            "has_an_appointment": false,
             "has_completed_an_appointment": false,
             "image_url": "/images/default_user_image.png",
             "last_name": "Smitham",
@@ -44,6 +47,8 @@
         "attributes": {
             "address_1": "Some Random Address 123",
             "address_2": null,
+            "card_brand": null,
+            "card_last4": null,
             "city": "East Ephraim",
             "created_at": {
                 "date": "2017-07-04 02:38:07.000000",
@@ -59,7 +64,8 @@
             },
             "first_name": "Crawford",
             "gender": null,
-            "has_booked_an_appointment": true,
+            "has_a_card": false,
+            "has_an_appointment": true,
             "has_completed_an_appointment": false,
             "image_url": "/images/default_user_image.png",
             "last_name": "Toy",
