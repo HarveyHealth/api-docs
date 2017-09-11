@@ -6,18 +6,31 @@ Get access token and refresh token for a specific user.
 Client id and client secret must be provided by a Harvey administrator.
 
 + Request Example
+
     + Headers
-        Content-Type: application/json
+
+            Content-Type: application/json
+
     + Body
-        {
-            "grant_type": "password",
-            "client_id": 1,
-            "client_secret": "0mUktabHH9evbtfoJ3Fyf9EYJ90jbVBeAMArZfsD",
-            "username": "patient@goharvey.com",
-            "password": "secret",
-            "scope": "*"
-        }
+
+            {
+                "grant_type": "password",
+                "client_id": 1,
+                "client_secret": "0mUktabHH9evbtfoJ3Fyf9EYJ90jbVBeAMArZfsD",
+                "username": "patient@goharvey.com",
+                "password": "secret",
+                "scope": "*"
+            }
+
 + Response 200 (application/json)
+
     + Headers
+
     + Body
-        <!-- include(../responses/oauth/post-token.json) -->
+
+            {
+              "token_type": "Bearer",
+              "expires_in": 1296000,
+              "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImY2MDcxZWY3MGFkNDUwNzJjZWQxMjMzNTgwM2FmYzc0ZGYxMzkxMzQ0ZmY3Y2JiNDY4NzkyNDdlZjQzZjQzMTM5YTcwYmI4YmRiMWM2MDZmIn0.eyJhdWQiOiIxIiwianRpIjoiZjYwNzFlZjcwYWQ0NTA3MmNlZDEyMzM1ODAzYWZjNzRkZjEzOTEzNDRmZjdjYmI0Njg3OTI0N2VmNDNmNDMxMzlhNzBiYjhiZGIxYzYwNmYiLCJpYXQiOjE0OTAzNjkzMDIsIm5iZiI6MTQ5MDM2OTMwMiwiZXhwIjoxNDkxNjY1MzAyLCJzdWIiOiIzIiwic2NvcGVzIjpbIioiXX0.PGXYTICxhPzOHOX9zzBPukfs4D7Rk6t3ob1MPyrXcKNMxCDYofclR5Kq3m68pyCGnqnaHpw7Q7dXKonXZnZo4cdYjZrLtkDP5WvNwGU9PdHjFRT_FtVgXZqS3kBzmFCg6WqahqeE9C00JOrOOTpnGWYmWBN4LaGZL--p1S7HM2oyopdAxg4cY0x6v0LT6uwlZqgk6wWjpBpSBaWAYkJJQs7QcH2yuF9DLV8M97rQuRCt0Edq-mwMX1E0vo1s_L50r9Ifc7MMqrfCWzfIpIXcQMyb_67C3YEE04JFcVdBkAiwSlwVMuZY9BiXkM7hRQHKs7-fb_EKBqRQJQkRojrF75GP6bRNo_VecPbdPpWQwbjYAGm3EPzGTrjEqgMuUyOuyQDYZnDQZAx1lsnw5Xj3UbyRDD0z8h-7w8x-GsaVMEHwDu21iYCUpg-Pr3IGOVaj9znItOZcjzN4XihB2nWKgkWOfvBVmlC8BvT6TEHHFlKqeZ4goSxziPI2MC2S0btcPzi_rdlphWvKiHGiX2zWRz53OK404A5Mgs7GWZQB1zZq4Oy03FaWMmwC0nWWr_WWKqpLdQN5UfpvDwVruN4LhuxPhMHQtjlA1-ZIM68n9YpoyodBbt14TkZbSsBdTSPXv-m56etZAyapmFRud-cRhgMd8i5X4SlNFiz5vMQvqwc",
+              "refresh_token": "gKLuQtcnLY9cauZai6lDRPseyILLC+NAVx19r7K0yBFn4k6sbnnbzYY0qlXG0E08MiD4NzkDe8Ku19DWcjQrKRfCPRunP7SF6jNv2iJ13/wNiadFEgewV8nPgNuVP3OlrrOM/Q0J6agb6W2ENCa4z82axUs471VZM4U4CvzQfSf3rWytCLKLKFdBGs/zODvRAqoFORM6SvNPczlrCyR6d+HFChh3dNSLYeGKCKgdGc6Afn4ubqv2LzcHbuZrY25DQQiaF/bjYyz9uebwkq5PbtOLbL6XYkyouT638SoV12Krh2rJ/8qy+AmlDRrKjstkaOF4074ik0xv2dFSPbziYaCKkAFDCylQnbnUWg1KTOH0FqJuTh0FsB2qLF6em28DGjSLWV5oD8qGIr5xUE4Iynp5vyq4pL+olVcxdEAtEDaaNNaQ8Rit1vES5FtoDQcUrpkHn4QX1gc2b1r4FK58uHzG8mwT2jkWaLgZu9pShIUJOS2oBlzwz3C416OQt3WuhtivuJZy9npUcwxCNSau7US5aAgJpA8xIv9ed/TAwcAY90CW3JC/kyglW+458D/rhAR/2vbxlstCAbKMBe6A/TJqTQTyAr5WFCsUrPehthw9Ghz/xjmj0CMCw/F8xefaGDmG19UQKlaenK1f+A6YyUIeXYkMQb44rba9G8po7Kw="
+            }

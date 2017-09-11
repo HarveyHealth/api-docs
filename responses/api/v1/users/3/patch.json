@@ -1,0 +1,46 @@
+{
+    "data": {
+        "type": "users",
+        "id": "3",
+        "attributes": {
+            "address_1": "Test Address 1234",
+            "address_2": null,
+            "card_brand": null,
+            "card_last4": null,
+            "city": "Port Meghanmouth",
+            "created_at": {
+                "date": "2017-09-11 01:24:54.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "doctor_name": "Sam Heathcote",
+            "email": "practitioner@goharvey.com",
+            "email_verified_at": {
+                "date": "2017-09-11 01:24:54.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "first_name": "Sam",
+            "gender": null,
+            "has_a_card": false,
+            "has_an_appointment": true,
+            "image_url": "/images/default_user_image.png",
+            "intake_completed_at": null,
+            "last_name": "Heathcote",
+            "phone": "3101234569",
+            "phone_verified_at": {
+                "date": "2017-09-11 01:24:54.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "state": "CA",
+            "terms_accepted_at": null,
+            "timezone": "America/Juneau",
+            "user_type": "practitioner",
+            "zip": "90401"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/users/3"
+        }
+    }
+}

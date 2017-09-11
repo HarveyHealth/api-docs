@@ -1,0 +1,85 @@
+{
+    "data": {
+        "type": "users",
+        "id": "3",
+        "attributes": {
+            "address_1": "7857 Elton Pike",
+            "address_2": null,
+            "card_brand": null,
+            "card_last4": null,
+            "city": "Port Meghanmouth",
+            "created_at": {
+                "date": "2017-09-11 01:24:54.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "doctor_name": "Sam Heathcote",
+            "email": "practitioner@goharvey.com",
+            "email_verified_at": {
+                "date": "2017-09-11 01:24:54.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "first_name": "Sam",
+            "gender": null,
+            "has_a_card": false,
+            "has_an_appointment": true,
+            "image_url": "/images/default_user_image.png",
+            "intake_completed_at": null,
+            "last_name": "Heathcote",
+            "phone": "3101234569",
+            "phone_verified_at": {
+                "date": "2017-09-11 01:24:54.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "state": "CA",
+            "terms_accepted_at": null,
+            "timezone": "America/Juneau",
+            "user_type": "practitioner",
+            "zip": "90401"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/users/3"
+        },
+        "relationships": {
+            "practitioner": {
+                "links": {
+                    "self": "http://harvey.app/api/v1/users/3/relationships/practitioner",
+                    "related": "http://harvey.app/api/v1/users/3/practitioner"
+                },
+                "data": {
+                    "type": "practitioner",
+                    "id": "1"
+                }
+            }
+        }
+    },
+    "included": [{
+        "type": "practitioner",
+        "id": "1",
+        "attributes": {
+            "background_picture_url": null,
+            "description": "Ducimus eaque dolorum nam nemo provident. Aspernatur architecto voluptatem eos aut.",
+            "graduated_year": 2000,
+            "licenses": [{
+                "id": 1,
+                "title": "DO",
+                "user_id": 3,
+                "number": "8900",
+                "state": "CA",
+                "created_at": "2017-09-11 01:24:54",
+                "updated_at": "2017-09-11 01:24:54"
+            }],
+            "name": "Sam Heathcote",
+            "picture_url": null,
+            "school": "nobis dolorem pariatur",
+            "specialty": ["recusandae", "Recyclable Material Collector"],
+            "type_name": "Wellhead Pumper",
+            "user_id": "3"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/practitioner/1"
+        }
+    }]
+}

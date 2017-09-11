@@ -1,15 +1,15 @@
 {
     "data": {
         "type": "users",
-        "id": "3",
+        "id": "7",
         "attributes": {
-            "address_1": "Test Address 1234",
+            "address_1": null,
             "address_2": null,
-            "card_brand": "Visa",
-            "card_last4": "9348",
-            "city": null,
+            "card_brand": null,
+            "card_last4": null,
+            "city": "Santa Monica",
             "created_at": {
-                "date": "2017-07-04 02:38:07.000000",
+                "date": "2017-09-11 02:46:17.000000",
                 "timezone_type": 3,
                 "timezone": "UTC"
             },
@@ -18,24 +18,21 @@
             "email_verified_at": null,
             "first_name": "John",
             "gender": null,
-            "has_a_card": true,
+            "has_a_card": false,
             "has_an_appointment": false,
-            "has_completed_an_appointment": false,
             "image_url": "/images/default_user_image.png",
+            "intake_completed_at": null,
             "last_name": "Doe",
             "phone": null,
             "phone_verified_at": null,
-            "state": null,
-            "terms_accepted_at": {
-                "date": "2017-07-04 02:38:07.000000",
-                "timezone_type": 3,
-                "timezone": "UTC"
-            },
+            "state": "CA",
+            "terms_accepted_at": null,
+            "timezone": null,
             "user_type": "patient",
             "zip": "90401"
         },
         "links": {
-            "self": "http://harvey.app/api/v1/users/3"
+            "self": "http://harvey.app/api/v1/users/7"
         }
     }
 }
