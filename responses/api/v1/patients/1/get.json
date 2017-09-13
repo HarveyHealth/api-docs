@@ -1,0 +1,79 @@
+{
+    "data": {
+        "type": "patients",
+        "id": "1",
+        "attributes": {
+            "birthdate": "1973-09-16",
+            "height_feet": "4",
+            "height_inches": "4",
+            "name": "Karlee Kilback",
+            "user_id": "2",
+            "weight": "120"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/patients/1"
+        },
+        "relationships": {
+            "intake": {
+                "links": {
+                    "self": "http://harvey.app/api/v1/patients/1/relationships/intake",
+                    "related": "http://harvey.app/api/v1/patients/1/intake"
+                },
+                "data": {
+                    "type": "intake",
+                    "id": "58bdaf6878fc4b8b3a9807c9e8e14319"
+                }
+            }
+        }
+    },
+    "included": [{
+        "type": "intake",
+        "id": "58bdaf6878fc4b8b3a9807c9e8e14319",
+        "attributes": {
+            "http_status": 200,
+            "stats": {
+                "responses": {
+                    "showing": 1
+                }
+            },
+            "questions": [{
+                "id": "yesno_55410452",
+                "question": "Are you married?",
+                "field_id": 55410452
+            }, {
+                "id": "date_55410467",
+                "question": "What is your birthday?",
+                "field_id": 55410467
+            }, {
+                "id": "number_55432555",
+                "question": "What is your height?",
+                "field_id": 55432555
+            }],
+            "responses": [{
+                "token": "58bdaf6878fc4b8b3a9807c9e8e14319",
+                "completed": "1",
+                "metadata": {
+                    "browser": "default",
+                    "platform": "other",
+                    "date_land": "2017-09-13 04:49:21",
+                    "date_submit": "2017-09-13 04:53:29",
+                    "user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0",
+                    "referer": "https://kyleahill.typeform.com/to/XGnCna?harvey_id=1&intake_validation_token=someToken",
+                    "network_id": "ade71c875e"
+                },
+                "hidden": {
+                    "harvey_id": "1",
+                    "intake_validation_token": "someToken"
+                },
+                "answers": {
+                    "yesno_55410452": "1",
+                    "date_55410467": "1929-03-03",
+                    "number_55432555": "120"
+                }
+            }]
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/intake/58bdaf6878fc4b8b3a9807c9e8e14319"
+        }
+    }]
+}

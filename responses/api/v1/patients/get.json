@@ -1,0 +1,45 @@
+{
+    "data": [{
+        "type": "patients",
+        "id": "1",
+        "attributes": {
+            "birthdate": "1973-09-16",
+            "height_feet": "4",
+            "height_inches": "4",
+            "name": "Karlee Kilback",
+            "user_id": "2",
+            "weight": "120"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/patients/1"
+        }
+    }, {
+        "type": "patients",
+        "id": "2",
+        "attributes": {
+            "birthdate": "1952-07-19",
+            "height_feet": "5",
+            "height_inches": "0",
+            "name": "Nestor Becker",
+            "user_id": "3",
+            "weight": "110"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/patients/2"
+        }
+    }, {
+        "type": "patients",
+        "id": "3",
+        "attributes": {
+            "birthdate": "1997-03-13",
+            "height_feet": "4",
+            "height_inches": "6",
+            "name": "Laurel Abernathy",
+            "user_id": "5",
+            "weight": "80"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/patients/3"
+        }
+    }]
+}

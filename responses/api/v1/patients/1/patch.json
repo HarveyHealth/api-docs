@@ -1,0 +1,17 @@
+{
+  "data": {
+    "type": "patients",
+    "id": "1",
+    "attributes": {
+      "birthdate": "1984-12-19",
+      "height_feet": "6",
+      "height_inches": "1",
+      "name": "Karlee Kilback",
+      "user_id": "3",
+      "weight": "210"
+    },
+    "links": {
+      "self": "http://harvey.app/api/v1/patients/1"
+    }
+  }
+}
