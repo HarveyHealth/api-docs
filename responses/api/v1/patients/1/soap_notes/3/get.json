@@ -1,0 +1,16 @@
+{
+    "data": {
+        "type": "soap_notes",
+        "id": "3",
+        "attributes": {
+            "created_by_user_id": "20",
+            "subjective": null,
+            "objective": null,
+            "assessment": null,
+            "plan": "Distinctio et non veniam quis ab sit vel. Dolores in repellat saepe ut dolor magnam dignissimos et. Aut odit quia id nostrum."
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/soap_notes/3"
+        }
+    }
+}

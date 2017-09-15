@@ -102,8 +102,6 @@ Update a patient&#39;s information.
 ## List Patient Attachments [/api/v1/patients/{patient_id}/attachments{?per_page}]
 ### List Patient Attachments [GET]
 
-View a listing of enabled patients.
-
 + Require Admin, Practitioner or logged in Patient matching requested patient_id.
 
 + Parameters
@@ -123,7 +121,7 @@ View a listing of enabled patients.
 
     + Body
 
-            <!-- include(../responses/api/v1/patients/get.json) -->
+            <!-- include(../responses/api/v1/patients/1/attachments/get.json) -->
 
 ## Get Patient Attachment [/api/v1/patients/{patient_id}/attachments/{attachment_id}]
 ### Get Patient Attachment [GET]
@@ -195,6 +193,229 @@ Deletes an Attachment associated to a Patient.
 + Parameters
     + patient_id: `2` (number, required) - Must be a valid ID.
     + attachment_id: `19` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 204 (application/json)
+
+    + Headers
+
+    + Body
+
+## List Patient Prescriptions [/api/v1/patients/{patient_id}/prescriptions{?per_page}]
+### List Patient Prescriptions [GET]
+
+View a listing of enabled patients.
+
++ Require Admin, Practitioner or logged in Patient matching requested patient_id.
+
++ Parameters
+    + per_page: `3` (number, optional) - Enables pagination and set items per page.
+
++ Request Example
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/1/prescriptions/get.json) -->
+
+## Get Patient Prescription [/api/v1/patients/{patient_id}/prescriptions/{prescription_id}]
+### Get Patient Prescription [GET]
+
+Gets an Prescription associated to a Patient.
+
++ Require Admin, Practitioner or logged in Patient matching requested patient_id. Prescription must belong to Patient.
+
++ Parameters
+    + patient_id: `1` (number, required) - Must be a valid ID.
+    + prescription_id: `2` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/1/prescriptions/2/get.json) -->
+
+## Create Patient Prescription [/api/v1/patients/{patient_id}/prescriptions]
+### Create Patient Prescription [POST]
+
+Creates an Prescription associated to a Patient.
+This endpoint response includes an 'url' key, its value is a temporary link to the uploaded file (valid for 12hs).
+
++ Require Admin or Practitioner. Prescription will belong to Patient.
+
++ Parameters
+    + patient_id: `1` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Attributes
+
+        + file: uploadedFile.pdf (string, required) - Prescription file. Allowed formats are bmp, img, jpeg, pdf and png.
+        + notes: Some quick note... (string, optional) - Quick notes associated to the Prescription, 1024 characters max.
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/1/prescriptions/post.json) -->
+
+## Delete Patient Prescription [/api/v1/patients/{patient_id}/prescriptions/{prescription_id}]
+### Delete Patient Prescription [DELETE]
+
+Deletes an Prescription associated to a Patient.
+
++ Require Admin, Practitioner.
+
++ Parameters
+    + patient_id: `3` (number, required) - Must be a valid ID.
+    + prescription_id: `12` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 204 (application/json)
+
+    + Headers
+
+    + Body
+
+## List Patient SOAP Notes [/api/v1/patients/{patient_id}/soap_notes{?per_page}]
+### List Patient SOAP Notes [GET]
+
+View a listing of enabled patients.
+
++ Require Admin, Practitioner or logged in Patient matching requested patient_id.
++ If request is made by Patient, 'subjective', 'objective' and 'assessment' values are hidden.
+
++ Parameters
+    + per_page: `3` (number, optional) - Enables pagination and set items per page.
+
++ Request Example as Practitioner
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/1/soap_notes/get.json) -->
+
+## Get Patient SOAP Note [/api/v1/patients/{patient_id}/soap_notes/{soap_note_id}]
+### Get Patient SOAP Note [GET]
+
+Gets an SOAP Note associated to a Patient.
+
++ Require Admin, Practitioner or logged in Patient matching requested patient_id. SOAP Note must belong to Patient.
++ If request is made by Patient, 'subjective', 'objective' and assessment' values are hidden.
+
++ Parameters
+    + patient_id: `1` (number, required) - Must be a valid ID.
+    + soap_note_id: `3` (number, required) - Must be a valid ID.
+
++ Request Example as Patients
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/1/soap_notes/3/get.json) -->
+
+## Create Patient SOAP Note [/api/v1/patients/{patient_id}/soap_notes]
+### Create Patient SOAP Note [POST]
+
+Creates an SOAP Note associated to a Patient.
+
++ Require Admin or Practitioner. SOAP Note will belong to Patient.
+
++ Parameters
+    + patient_id: `1` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Attributes
+
+        + subjective: Some (string, optional) - Subjective value, 2048 characters max.
+        + objective: Random (string, optional) - Objective value, 2048 characters max.
+        + assessment: Test (string, optional) - Assessment value, 2048 characters max.
+        + plan: String (string, optional) - Plan value, 2048 characters max.
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/1/soap_notes/post.json) -->
+
+## Delete Patient SOAP Note [/api/v1/patients/{patient_id}/soap_notes/{soap_note_id}]
+### Delete Patient SOAP Note [DELETE]
+
+Deletes an SOAP Note associated to a Patient.
+
++ Require Admin, Practitioner.
+
++ Parameters
+    + patient_id: `3` (number, required) - Must be a valid ID.
+    + soap_note_id: `12` (number, required) - Must be a valid ID.
 
 + Request Example
 

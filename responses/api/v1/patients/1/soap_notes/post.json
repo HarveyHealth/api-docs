@@ -1,0 +1,16 @@
+{
+    "data": {
+        "type": "soap_notes",
+        "id": "21",
+        "attributes": {
+            "created_by_user_id": "20",
+            "subjective": "Some",
+            "objective": "Random",
+            "assessment": "Test",
+            "plan": "String"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/soap_notes/21"
+        }
+    }
+}

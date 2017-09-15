@@ -1,0 +1,14 @@
+{
+    "data": {
+        "type": "prescriptions",
+        "id": "11",
+        "attributes": {
+            "created_by_user_id": "2",
+            "notes": "Some quick note...",
+            "url": "https://harvey-develop.s3.amazonaws.com/testing/uploadedFile.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJW7DVP3YBW3FTZKQ%2F20170915%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20170915T044427Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Signature=a79cd7e03fcef70ca926335fecae39b850fbd5ef3f9bd0296bf0552f25a7b691"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/prescriptions/11"
+        }
+    }
+}
