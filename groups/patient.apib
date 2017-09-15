@@ -237,7 +237,7 @@ View a listing of enabled patients.
 ## Get Patient Prescription [/api/v1/patients/{patient_id}/prescriptions/{prescription_id}]
 ### Get Patient Prescription [GET]
 
-Gets an Prescription associated to a Patient.
+Gets a Prescription associated to a Patient.
 
 + Require Admin, Practitioner or logged in Patient matching requested patient_id. Prescription must belong to Patient.
 
@@ -264,7 +264,7 @@ Gets an Prescription associated to a Patient.
 ## Create Patient Prescription [/api/v1/patients/{patient_id}/prescriptions]
 ### Create Patient Prescription [POST]
 
-Creates an Prescription associated to a Patient.
+Creates a Prescription associated to a Patient.
 This endpoint response includes an 'url' key, its value is a temporary link to the uploaded file (valid for 12hs).
 
 + Require Admin or Practitioner. Prescription will belong to Patient.
@@ -296,7 +296,7 @@ This endpoint response includes an 'url' key, its value is a temporary link to t
 ## Delete Patient Prescription [/api/v1/patients/{patient_id}/prescriptions/{prescription_id}]
 ### Delete Patient Prescription [DELETE]
 
-Deletes an Prescription associated to a Patient.
+Deletes a Prescription associated to a Patient.
 
 + Require Admin, Practitioner.
 
