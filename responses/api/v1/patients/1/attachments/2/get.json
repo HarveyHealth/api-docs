@@ -1,0 +1,15 @@
+{
+    "data": {
+        "type": "attachments",
+        "id": "2",
+        "attributes": {
+            "created_by_user_id": "6",
+            "name": "magni",
+            "notes": "Et fugit provident ullam accusantium culpa. Fugit officiis nulla omnis adipisci alias. Cum non quasi consequatur aut placeat id. Repellendus perspiciatis facilis vel fuga.",
+            "url": "https://harvey-develop.s3.amazonaws.com/testing/testFile.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJW7DVP3YBW3FTZKQ%2F20170913%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20170913T223529Z&X-Amz-SignedHeaders=host&X-Amz-Expires=10800&X-Amz-Signature=3abc44e97994ba5ef5bedd7ed430b9467fe9af1570439c8f701479534a543c40"
+        },
+        "links": {
+            "self": "http://harvey.app/api/v1/attachments/2"
+        }
+    }
+}
