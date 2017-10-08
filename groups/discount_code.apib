@@ -1,0 +1,57 @@
+# Group DiscountCode
+## Get DiscountCode [/api/v1/discountcode{?discount_code,applies_to}]
+### Get a DiscountCode [GET]
+Get DiscountCode information
+
++ Require User to be logged in.
+
++ Parameters
+
+    + discount_code: `harvey132` (string, required) - The discount code.
+    + applies_to: `consultation` (string, required) - Where to apply the discount code.
+        + Members
+            + `lab-test`
+            + `consultation`
+            + `all`
+
++ Request Example
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            {
+                "data": {
+                    "type": "discountcode",
+                    "id": "1",
+                    "attributes": {
+                        "valid": true,
+                        "discount_type": "dollars",
+                        "amount": "33.00",
+                        "code": "sed232"
+                    },
+                    "links": {
+                        "self": "http://harvey.app/api/v1/discountcode/1"
+                    }
+                }
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            {
+                "errors": [{
+                    "valid": false
+                }]
+            }
