@@ -1,0 +1,111 @@
+# Group Patient Attachment
+## List Attachments [/api/v1/attachments{?per_page}]
+### List Attachments [GET]
+
+Gets all the Attachments for the current logged in user.
+Admin, Practitioner role: Gets all the attachments.
+Patient role: Gets attachments assigned or created by current Patient.
+
++ Parameters
+    + per_page: `5` (number, optional) - Enables pagination and set items per page.
+
++ Request Example
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/1/attachments/get.json) -->
+
+## Get Attachment [/api/v1/attachments/{attachment_id}]
+### Get Attachment [GET]
+
+Gets an Attachment associated to a Patient.
+
++ Require Admin, Practitioner or logged in Patient as owner of the Attachment.
+
++ Parameters
+    + patient_id: `1` (number, required) - Must be a valid ID.
+    + attachment_id: `2` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/1/attachments/2/get.json) -->
+
+## Create Attachment [/api/v1/patients/{patient_id}/attachments]
+### Create Attachment [POST]
+
+Creates an Attachment associated to a Patient.
+This endpoint response includes an 'url' key, its value is a temporary link to the uploaded file (valid for 12hs).
+
++ Require Admin, Practitioner or logged in Patient matching patient_id. Attachment will belong to Patient.
+
++ Parameters
+    + patient_id: `1` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Attributes
+
+        + file: uploadedFile.pdf (string, required) - Attachment file. Allowed formats are bmp, img, jpeg, pdf and png.
+        + name: My Attachment (string, optional) - A name for the Attachment, 64 characters max.
+        + notes: Some quick note... (string, optional) - Quick notes associated to the Attachment, 1024 characters max.
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/1/attachments/post.json) -->
+
+## Delete Attachment [/api/v1/attachments/{attachment_id}]
+### Delete Attachment [DELETE]
+
+Deletes an Attachment associated to a Patient.
+
++ Require Admin, Practitioner or logged in Patient as owner of the Attachment.
+
++ Parameters
+    + patient_id: `2` (number, required) - Must be a valid ID.
+    + attachment_id: `19` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 204 (application/json)
+
+    + Headers
+
+    + Body

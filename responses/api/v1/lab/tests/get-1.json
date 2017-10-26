@@ -6,7 +6,6 @@
             "lab_order_id": "1",
             "sku_id": "9",
             "status": "complete",
-            "results_url": null,
             "shipment_code": "9790026671902",
             "completed_at": {
                 "date": "2017-06-09 03:46:39.000000",

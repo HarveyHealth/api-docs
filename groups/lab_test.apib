@@ -14,6 +14,7 @@ View a listing of lab-tests.
             + `practitioner`
             + `lab_order`
             + `sku`
+            + `results`
 + Request
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
@@ -43,7 +44,6 @@ Create a new lab-test. Since any lab test belongs to one lab order, you need to 
             + `recommended`
             + `shipped`
         + default: 'recommended'
-    + results_url: `goharvey.com/lab/tests/1234` (string, optional) - If present, must be a valid URL.
     + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
 
 + Request
@@ -68,6 +68,15 @@ Create a new lab-test. Since any lab test belongs to one lab order, you need to 
 Get a lab-test by its ID.
 
 + Require Admin or current logged in User as the Patient or Practitioner of the LabOrder associated with this LabTest.
+
++ Parameters
+    + include: `results` (string, optional) - Join relationship data.
+        + Members
+            + `patient`
+            + `practitioner`
+            + `lab_order`
+            + `sku`
+            + `results`
 
 + Request
     + Headers
