@@ -1,0 +1,72 @@
+# Group LabTest Result
+## Create LabTestResult [/api/v1/lab/tests/{lab_test_id}/results]
+### Create a LabTestResult [POST]
+
+Attach a result to a LabTest.
+
++ Require Admin or current logged in User as Practitioner of the LabOrder associated with this LabTest.
+
++ Parameters
+    + lab_test_id: `1` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Attributes
+
+        + file: uploadedFile.pdf (string, required) - Attachment file. Only .pdf files are allowed.
+        + notes: Some quick note... (string, optional) - Quick notes associated to the Attachment, 1024 characters max.
+
+    + Headers
+
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
+
+    + Body
+        {
+            "file": "testFile.pdf",
+            "notes": "Lab Test Result Notes.",
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+    + Body
+
+        <!-- include(../responses/api/v1/lab/tests/1/post-results.json) -->
+
+## Get LabTestResult [/api/v1/lab/tests/results/{lab_test_result_id}]
+### Get a LabTestResult [GET]
+
+Get a LabTestResult by its ID.
+
++ Require Admin or current logged in User as the Patient or Practitioner of the LabTest associated with this LabTestResult.
+
++ Parameters
+    + lab_test_results_id: `1` (number, required) - Must be a valid ID.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/lab/tests/get-1.json) -->
+
+## Delete LabTestResult [/api/v1/lab/tests/results/{lab_test_result_id}]
+### Delete a LabTestResult [DELETE]
+
++ Admin role required.
+
++ Parameters
+    + lab_test_result_id: `1` (number, required) - Must be a valid ID.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 204 (application/json)

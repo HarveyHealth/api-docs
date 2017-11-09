@@ -16,6 +16,7 @@ View a listing of enabled patients.
             + `soap_notes`
             + `attachments`
             + `prescriptions`
+            + `lab_orders`
 
 + Request Example
 
@@ -39,12 +40,16 @@ View a listing of enabled patients.
 + Require Admin, Practitioner or logged in Patient matching requested patient_id.
 
 + Parameters
-    + patient_id: `1` (number, required) - Must be a valid ID.
-    + include: `intake` (string, optional) - Join relationship data.
+    + patient_id: `31` (number, required) - Must be a valid ID.
+    + include: `attachments,intake,prescriptions,soap_notes,lab_orders.lab_tests.results` (string, optional) - Join relationship data, dot concatenation supported.
         + Members
             + `user`
             + `appointments`
             + `intake`
+            + `soap_notes`
+            + `attachments`
+            + `prescriptions`
+            + `lab_orders`
 
 + Request Example
 
@@ -60,7 +65,7 @@ View a listing of enabled patients.
 
     + Body
 
-            <!-- include(../responses/api/v1/patients/1/get?include=intake.json) -->
+            <!-- include(../responses/api/v1/patients/31/get?include=attachments,intake,prescriptions,soap_notes,lab_orders.lab_tests.results.json) -->
 
 ## Update Patient [/api/v1/patients/{patient_id}]
 ### Update Patient [PATCH]

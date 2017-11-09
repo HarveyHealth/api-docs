@@ -1,5 +1,5 @@
 # Group LabTest
-## List LabTests [/api/v1/lab/tests]
+## List LabTests [/api/v1/lab/tests{?per_page,include}]
 ### List LabTests [GET]
 
 View a listing of lab-tests.
@@ -30,23 +30,24 @@ View a listing of lab-tests.
 
 Create a new lab-test. Since any lab test belongs to one lab order, you need to submit the lab_order_id to put this new lab-test under. Requires Admin.
 
-+ Parameters
-    + lab_order_id: `15` (number, required) - LabOrder, must be a valid ID.
-    + sku_id: `12` (number, required) - SKU, must be a valid ID.
-    + status: `shipped` (enum[string], optional) - LabTest status.
-        + Members
-            + `canceled`
-            + `complete`
-            + `confirmed`
-            + `mailed`
-            + `processing`
-            + `received`
-            + `recommended`
-            + `shipped`
-        + default: 'recommended'
-    + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
++ Request Example
 
-+ Request
+    + Attributes
+        + lab_order_id: `15` (number, required) - LabOrder, must be a valid ID.
+        + sku_id: `12` (number, required) - SKU, must be a valid ID.
+        + status: `shipped` (enum[string], optional) - LabTest status.
+            + Members
+                + `canceled`
+                + `complete`
+                + `confirmed`
+                + `mailed`
+                + `processing`
+                + `received`
+                + `recommended`
+                + `shipped`
+            + default: 'recommended'
+        + shipment_code: `0342404938294` (string, optional) - Any string, no validation.
+
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
         X-Requested-With: XMLHttpRequest
@@ -62,10 +63,10 @@ Create a new lab-test. Since any lab test belongs to one lab order, you need to 
     + Body
         <!-- include(../responses/api/v1/lab/post-tests.json) -->
 
-## Get LabTest [/api/v1/lab/tests/1]
+## Get LabTest [/api/v1/lab/tests/{lab_test_id}{?per_page,include}]
 ### Get a LabTest [GET]
 
-Get a lab-test by its ID.
+Get a LabTest by its ID.
 
 + Require Admin or current logged in User as the Patient or Practitioner of the LabOrder associated with this LabTest.
 
@@ -77,6 +78,8 @@ Get a lab-test by its ID.
             + `lab_order`
             + `sku`
             + `results`
+    + lab_test_id: `1` (number, required) - Must be a valid ID.
+
 
 + Request
     + Headers
@@ -88,23 +91,30 @@ Get a lab-test by its ID.
     + Body
         <!-- include(../responses/api/v1/lab/tests/get-1.json) -->
 
-## Update a LabTest [/api/v1/lab/tests/1]
+## Update a LabTest [/api/v1/lab/tests/{lab_test_id}]
 ### Update LabTest [PATCH]
 
-+ Require Admin or current logged in User as Practitioner of the LabOrder associated with this LabTest. Additionaly, if LabTest status is 'complete', it can't be updated.
++ Require Admin or current logged in User as Practitioner of the LabOrder associated with this LabTest.
 
 + Parameters
-    + status: `shipped` (enum[string], optional) - LabTest status.
-        + Members
-            + `canceled`
-            + `complete`
-            + `confirmed`
-            + `mailed`
-            + `processing`
-            + `received`
-            + `recommended`
-            + `shipped`
-+ Request
+
+    + lab_test_id: `1` (number, required) - Must be a valid ID.
+
++ Request Example
+
+    + Attributes
+
+        + status: `shipped` (enum[string], optional) - LabTest status.
+            + Members
+                + `canceled`
+                + `complete`
+                + `confirmed`
+                + `mailed`
+                + `processing`
+                + `received`
+                + `recommended`
+                + `shipped`
+
     + Headers
         Authorization: Bearer {{ ACCESS_TOKEN }}
         X-Requested-With: XMLHttpRequest
@@ -118,10 +128,13 @@ Get a lab-test by its ID.
     + Body
         <!-- include(../responses/api/v1/lab/tests/patch-3.json) -->
 
-## Delete LabTest [/api/v1/lab/tests/2]
+## Delete LabTest [/api/v1/lab/tests/{lab_test_id}]
 ### Delete a LabTest [DELETE]
 
 + Admin role required.
+
++ Parameters
+    + lab_test_id: `1` (number, required) - Must be a valid ID.
 
 + Request
     + Headers

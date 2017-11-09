@@ -1,0 +1,39 @@
+# Group Intake
+## List Intakes [/api/v1/intakes{?per_page}]
+### List Intakes [GET]
+
+View a listing of Intakes.
+
++ Admin or Practitioner role required.
+
++ Parameters
+    + per_page: `2` (number, optional) - Enables pagination and set items per page.
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/get-intakes.json) -->
+
+## Get Intake [/api/v1/intakes/{intake_token}]
+### Get a Intake [GET]
+
+Get an Intake by using its token.
+
++ Admin or Practitioner role required.
+
++ Parameters
+    + intake_token: `b20ea4e0ae2d7504a8b78aacf1f963b6` (number, required) - Must be a valid token.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/intakes/get-b20ea4e0ae2d7504a8b78aacf1f963b6.json) -->
