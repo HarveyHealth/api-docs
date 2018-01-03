@@ -1,0 +1,72 @@
+# Group Invoice
+## List Invoices [/api/v1/invoices]
+### List Invoices [GET]
+
+View a listing of all invoices.
+
++ Admin to retrieve all invoices, or patient to retrieve only own invoices.
+
++ Parameters
+    + per_page: `2` (number, optional) - Enables pagination and set items per page.
+    + include: `invoice_items` (string, optional) - Join relationship data.
+        + Members
+            + `invoice_items`
+            + `patient.user`
+            + `patient`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/invoices/get-invoices.json) -->
+
+
+## Get Invoice Items [/api/v1/invoices/1/invoice_items]
+### Get Invoice Items [GET]
+
+Get a invoice items by Invoice ID.
+
++ Require Admin or current logged in User as the Patient of the Invoice.
+
++ Parameters
+    + include: `invoice_items` (string, optional) - Join relationship data.
+        + Members
+            + `invoice_items`
+            + `patient,user`
+            + `patient`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/invoices/get-items.json) -->
+
+
+## Get Invoice [/api/v1/invoices/1?include=invoice_items]
+### Get a Invoice [GET]
+
+Get a invoice by its ID.
+
++ Require Admin or current logged in User as the Patient of the Invoice.
+
++ Parameters
+    + include: `invoice_items` (string, optional) - Join relationship data.
+        + Members
+            + `invoice_items`
+            + `patient,user`
+            + `patient`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/invoices/get-1.json) -->

@@ -67,6 +67,34 @@ View a listing of enabled patients.
 
             <!-- include(../responses/api/v1/patients/31/get?include=attachments,intake,prescriptions,soap_notes,lab_orders.lab_tests.results.json) -->
 
+## Get Patient Invoices[/api/v1/patients/{patient_id}/invoices{?include}]
+### Get Patient Invoices [GET]
+
++ Require Admin or logged in Patient matching requested patient_id.
+
++ Parameters
+    + patient_id: `31` (number, required) - Must be a valid ID.
+    + include: `invoice_items, discount_code` (string, optional) - Join relationship data, dot concatenation supported.
+        + Members
+            + `invoice_items`
+            + `discount_code`
+
++ Request Example
+
+    + Headers
+
+            Authorization: Bearer {{ ACCESS_TOKEN }}
+            X-Requested-With: XMLHttpRequest
+            Content-Type: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+    + Body
+
+            <!-- include(../responses/api/v1/patients/31/get_invoices.json) -->
+
 ## Update Patient [/api/v1/patients/{patient_id}]
 ### Update Patient [PATCH]
 

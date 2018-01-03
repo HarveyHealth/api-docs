@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "type": "invoice_items",
+            "id": "5",
+            "attributes": {
+                "invoice_id": "5",
+                "item_id": "9",
+                "item_class": "App\\Models\\LabTest",
+                "amount": "99.00",
+                "description": "Hormones Test",
+                "sku_id": "2"
+            },
+            "links": {
+                "self": "http://goharvey.app/api/v1/invoice_items/5"
+            }
+        },
+        {
+            "type": "invoice_items",
+            "id": "6",
+            "attributes": {
+                "invoice_id": "5",
+                "item_id": "10",
+                "item_class": "App\\Models\\LabTest",
+                "amount": "199.00",
+                "description": "Toxic Metals Test",
+                "sku_id": "7"
+            },
+            "links": {
+                "self": "http://goharvey.app/api/v1/invoice_items/6"
+            }
+        },
+        {
+            "type": "invoice_items",
+            "id": "7",
+            "attributes": {
+                "invoice_id": "5",
+                "item_id": null,
+                "item_class": null,
+                "amount": "20.00",
+                "description": "Processing Fee",
+                "sku_id": "14"
+            },
+            "links": {
+                "self": "http://goharvey.app/api/v1/invoice_items/7"
+            }
+        }
+    ]
+}

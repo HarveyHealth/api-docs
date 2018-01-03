@@ -1,0 +1,24 @@
+{
+    "data": {
+        "type": "invoices",
+        "id": "1",
+        "attributes": {
+            "patient_id": "9",
+            "amount": "318.00",
+            "card_brand": "Visa",
+            "card_last_four": "4242",
+            "description": "Lab Tests order #3 on 11/6/2017",
+            "discount": "0.00",
+            "paid_on": {
+                "date": "2017-11-06 18:39:23.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "status": "paid",
+            "subtotal": "318.00"
+        },
+        "links": {
+            "self": "http://goharvey.app/api/v1/invoices/5"
+        }
+    }
+}
