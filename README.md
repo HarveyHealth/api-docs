@@ -10,3 +10,5 @@ Run Aglio server (at `localhost:3000`)
 Generate new index.html file
 
 `npm run build`
+
+Online documentation can be found [here](https://harvey-api-docs.herokuapp.com/).
