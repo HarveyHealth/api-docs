@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "aglio": "^2.3",
-    "aglio-theme-harvey": "https://git@github.com:HomeHero/aglio-theme-harvey",
+    "aglio-theme-harvey": "https://git@github.com:HomeHero/aglio-theme-harvey#v1.0.0",
     "express": "^4.15.2"
   },
   "repository": {
