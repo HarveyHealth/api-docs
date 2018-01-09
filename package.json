@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "./node_modules/aglio/bin/aglio.js -i Harvey.apib --theme-full-width --theme-template triple --server",
-    "build": "./node_modules/aglio/bin/aglio.js -i Harvey.apib --theme-full-width --theme-template triple -o public/index.html"
+    "serve": "./node_modules/aglio/bin/aglio.js -i Harvey.apib --theme-full-width --theme-template triple --theme harvey --server",
+    "build": "./node_modules/aglio/bin/aglio.js -i Harvey.apib --theme-full-width --theme-template triple --theme harvey -o public/index.html"
   },
   "author": "Jose Soto <jose@goharvey.com>",
   "license": "ISC",
