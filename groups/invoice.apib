@@ -1,0 +1,73 @@
+# Group Invoice
+## List Invoices [/api/v1/invoices{?per_page,include}]
+### List Invoices [GET]
+
+View a listing of all invoices.
+
++ Admin to retrieve all invoices, or patient to retrieve only own invoices.
+
++ Parameters
+    + per_page: `2` (number, optional) - Enables pagination and set items per page.
+    + include: `invoice_items` (string, optional) - Join relationship data.
+        + Members
+            + `invoice_items`
+            + `patient.user`
+            + `patient`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/invoices/get?include=invoice_items.json) -->
+
+## Get Invoice Items [/api/v1/invoices/{invoice_id}/invoice_items{?include}]
+### Get Invoice Items [GET]
+
+Get a invoice items by Invoice ID.
+
++ Require Admin or current logged in User as the Patient of the Invoice.
+
++ Parameters
+    + invoice_id: `1` (number, required) - Must be a valid ID.
+    + include: `invoice_items` (string, optional) - Join relationship data.
+        + Members
+            + `invoice_items`
+            + `patient,user`
+            + `patient`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/invoices/1/invoice_items/get.json) -->
+
+
+## Get Invoice [/api/v1/invoices/{invoice_id}{?include}]
+### Get a Invoice [GET]
+
+Get a invoice by its ID.
+
++ Require Admin or current logged in User as the Patient of the Invoice.
+
++ Parameters
+    + invoice_id: `1` (number, required) - Must be a valid ID.
+    + include: `invoice_items` (string, optional) - Join relationship data.
+        + Members
+            + `invoice_items`
+            + `patient,user`
+            + `patient`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/invoices/1/get.json) -->

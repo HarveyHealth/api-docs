@@ -1,0 +1,119 @@
+{
+    "data": [
+        {
+            "type": "soap_notes",
+            "id": "6",
+            "attributes": {
+                "patient_id": "46",
+                "assessment": "Ex ratione voluptatibus sed dolor quo maxime. Consequatur sed quae autem dolores minima excepturi sit.",
+                "created_at": {
+                    "date": "2017-11-06 20:35:23.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "created_by_user_id": "111",
+                "doctor_name": false,
+                "objective": "Vel aut minus sit a consequuntur molestias. Sed voluptas et velit repellat ut. Optio culpa perferendis itaque et nostrum vel. Harum placeat rerum ipsam occaecati.",
+                "plan": "Qui sed iure et illo. Iusto iste similique autem. Architecto omnis ab rerum porro.",
+                "subjective": "Architecto ut libero quo nihil. Vel rerum ab sit aperiam consequatur. Eaque laborum aspernatur minus harum velit."
+            },
+            "links": {
+                "self": "https://www.goharvey.com/api/v1/soap_notes/6"
+            }
+        },
+        {
+            "type": "soap_notes",
+            "id": "1",
+            "attributes": {
+                "patient_id": "1",
+                "assessment": "Eveniet et rerum officia ullam voluptatum rerum sed. Quis in voluptates eum non mollitia. Nobis qui assumenda iure quisquam amet.",
+                "created_at": {
+                    "date": "2017-11-06 20:35:22.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "created_by_user_id": "16",
+                "doctor_name": "Grayson Torphy",
+                "objective": "Dolor blanditiis omnis amet sit officiis eius. Voluptatum consectetur provident mollitia voluptates eum facere quia. Nemo a nam omnis praesentium.",
+                "plan": "Quasi dicta mollitia earum. Occaecati saepe ut iusto eum quis error. Mollitia aperiam illum ratione.",
+                "subjective": "Veritatis aliquam quis dolorum debitis. Facere explicabo et mollitia ducimus sint excepturi. Nulla id alias facere quia eveniet quod provident incidunt."
+            },
+            "links": {
+                "self": "https://www.goharvey.com/api/v1/soap_notes/1"
+            }
+        },
+        {
+            "type": "attachments",
+            "id": "1",
+            "attributes": {
+                "patient_id": "1",
+                "created_at": {
+                    "date": "2017-11-06 20:35:22.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "created_by_user_id": "4",
+                "doctor_name": "Grayson Torphy",
+                "name": "exercitationem",
+                "notes": "Possimus inventore alias quo pariatur natus ea provident. Porro cum neque deleniti optio. Repellendus temporibus qui vel sapiente.",
+                "url": "https://harvey-develop.s3.amazonaws.com/testing/testFile.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJW7DVP3YBW3FTZKQ%2F20171108%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20171108T144353Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Signature=8fbd4b4cd312997fbbe6626a0807444a6c8ad93bf5b9c532e4e93098134b45af"
+            },
+            "links": {
+                "self": "https://www.goharvey.com/api/v1/attachments/1"
+            }
+        },
+        {
+            "type": "prescriptions",
+            "id": "2",
+            "attributes": {
+                "patient_id": "1",
+                "created_at": {
+                    "date": "2017-11-06 20:35:22.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "created_by_user_id": "12",
+                "doctor_name": "Grayson Torphy",
+                "notes": "Non possimus nihil aut. Voluptas nesciunt id est dolor perspiciatis dolorem sit. Ut rem qui accusamus voluptatem facilis ullam. Cupiditate vel molestiae maxime ratione perspiciatis pariatur.",
+                "url": "https://harvey-develop.s3.amazonaws.com/testing/testFile.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJW7DVP3YBW3FTZKQ%2F20171108%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20171108T144353Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Signature=8fbd4b4cd312997fbbe6626a0807444a6c8ad93bf5b9c532e4e93098134b45af"
+            },
+            "links": {
+                "self": "https://www.goharvey.com/api/v1/prescriptions/2"
+            }
+        },
+        {
+            "type": "lab_tests_results",
+            "id": "2",
+            "attributes": {
+                "created_at": {
+                    "date": "2017-11-06 20:35:22.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "lab_test_id": "3",
+                "notes": "Et ut repellendus laudantium quia. Doloribus numquam quasi qui quia fugiat eos. Quia adipisci dolores est omnis perspiciatis et sit.",
+                "url": "https://harvey-develop.s3.amazonaws.com/testing/testFile.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJW7DVP3YBW3FTZKQ%2F20171108%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20171108T144353Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Signature=8fbd4b4cd312997fbbe6626a0807444a6c8ad93bf5b9c532e4e93098134b45af"
+            },
+            "links": {
+                "self": "https://www.goharvey.com/api/v1/lab_tests_results/2"
+            }
+        },
+        {
+            "type": "lab_tests_results",
+            "id": "3",
+            "attributes": {
+                "created_at": {
+                    "date": "2017-11-06 20:35:22.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "lab_test_id": "4",
+                "notes": "Eum eaque quam recusandae officia. Ipsam dolorem ducimus autem magnam. Magni nostrum natus dolorum exercitationem quidem fugit. Earum placeat omnis est nostrum molestiae corporis.",
+                "url": "https://harvey-develop.s3.amazonaws.com/testing/testFile.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJW7DVP3YBW3FTZKQ%2F20171108%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20171108T144353Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Signature=8fbd4b4cd312997fbbe6626a0807444a6c8ad93bf5b9c532e4e93098134b45af"
+            },
+            "links": {
+                "self": "https://www.goharvey.com/api/v1/lab_tests_results/3"
+            }
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "data": {
+        "type": "invoice_item",
+        "id": "1",
+        "attributes": {
+            "invoice_id": "5",
+            "item_id": "9",
+            "item_class": "App\\Models\\LabTest",
+            "amount": "99.00",
+            "description": "Hormones Test",
+            "sku_id": "2"
+        },
+        "links": {
+            "self": "http://goharvey.app/api/v1/invoice_item/5"
+        },
+        "relationships": {
+            "invoice": {
+                "links": {
+                    "related": "http://goharvey.app/api/v1/invoice_item/5/invoice"
+                },
+                "data": {
+                    "type": "invoice",
+                    "id": "5"
+                }
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "invoice",
+            "id": "5",
+            "attributes": {
+                "patient_id": "9",
+                "amount": "318.00",
+                "card_brand": "Visa",
+                "card_last_four": "4242",
+                "description": "Lab Tests order #3 on 11/6/2017",
+                "discount": "0.00",
+                "paid_on": {
+                    "date": "2017-11-06 18:39:23.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "status": "paid",
+                "subtotal": "318.00"
+            },
+            "links": {
+                "self": "http://goharvey.app/api/v1/invoice/5"
+            }
+        }
+    ]
+}

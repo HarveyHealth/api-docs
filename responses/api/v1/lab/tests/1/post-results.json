@@ -1,0 +1,19 @@
+{
+    "data": {
+        "type": "lab_tests_results",
+        "id": "3",
+        "attributes": {
+            "created_at": {
+                "date": "2017-11-08 01:46:22.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            },
+            "lab_test_id": "1",
+            "notes": "Lab Test Result Notes.",
+            "url": "https://harvey-develop.s3.amazonaws.com/testing/testFile.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJW7DVP3YBW3FTZKQ%2F20171109%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20171109T145950Z&X-Amz-SignedHeaders=host&X-Amz-Expires=43200&X-Amz-Signature=e59aeace1cb284b2b441b33e4991a8ff5aa9b7aeab7375dd1961ecddde55d6b3"
+        },
+        "links": {
+            "self": "https://www.goharvey.com/api/v1/lab_tests_results/3"
+        }
+    }
+}

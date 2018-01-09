@@ -1,0 +1,20 @@
+# Group Search
+## Search Records [/api/v1/search{?term,per_page}]
+### Search Records [GET]
+
++ Search from a list of records associated to the authorized user (Admin role can search on all records).
++ Returns a polymorphic collection of resources that may contain SOAP Notes, Prescriptions, Attachments and Lab Results.
+
++ Parameters
+    + term: `John Lennon` (string, required) - Filter results looking for string inside records.
+    + per_page: `3` (number, optional) - Enables pagination and set items per page.
+
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/get-search.json) -->

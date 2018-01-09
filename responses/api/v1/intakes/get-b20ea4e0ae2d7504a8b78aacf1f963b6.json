@@ -1,0 +1,373 @@
+{
+    "data": {
+        "type": "intakes",
+        "id": "b20ea4e0ae2d7504a8b78aacf1f963b6",
+        "attributes": {
+            "questions": [{
+                "id": "yesno_55410452",
+                "question": "Are you married?",
+                "field_id": 55410452
+            }, {
+                "id": "date_55410467",
+                "question": "What is your birthday?",
+                "field_id": 55410467
+            }, {
+                "id": "number_55432555",
+                "question": "What is your height?",
+                "field_id": 55432555
+            }, {
+                "id": "number_55433816",
+                "question": "What is your <strong>weight</strong> (pounds)?",
+                "field_id": 55433816
+            }, {
+                "id": "number_55434023",
+                "question": "What is your <strong>ideal weight</strong>?",
+                "field_id": 55434023
+            }, {
+                "id": "yesno_55434108",
+                "question": "Have you ever used integrative/naturopathic medicine before?",
+                "field_id": 55434108
+            }, {
+                "id": "list_57969547_choice",
+                "question": "How did you hear about us?",
+                "field_id": 57969547
+            }, {
+                "id": "dropdown_55434799",
+                "question": "What state do you live in?",
+                "field_id": 55434799
+            }, {
+                "id": "textfield_55434845",
+                "question": "What city do you live in?",
+                "field_id": 55434845
+            }, {
+                "id": "textfield_55435066",
+                "question": "<strong>Medical History</strong>",
+                "field_id": 55435066
+            }, {
+                "id": "yesno_55410469",
+                "question": "Have you ever had any medical diagnoses, hospitalizations or surgeries?",
+                "field_id": 55410469
+            }, {
+                "id": "textfield_55435132",
+                "question": "If yes, please briefly explain",
+                "field_id": 55435132
+            }, {
+                "id": "list_55509223_choice",
+                "question": "Do you have a <strong>family history</strong> of any of the following health conditions?",
+                "field_id": 55509223
+            }, {
+                "id": "textfield_55435503",
+                "question": "Any other <strong>family health</strong> conditions that worry you?",
+                "field_id": 55435503
+            }, {
+                "id": "list_55509266_choice",
+                "question": "Do you regularly use any of the following substances?",
+                "field_id": 55509266
+            }, {
+                "id": "textfield_55435600",
+                "question": "If yes, please briefly explain",
+                "field_id": 55435600
+            }, {
+                "id": "yesno_55410585",
+                "question": "Are you currently taking any vitamins, supplements or medications?",
+                "field_id": 55410585
+            }, {
+                "id": "textfield_55435678",
+                "question": "If yes, please list them below.",
+                "field_id": 55435678
+            }, {
+                "id": "textfield_55435711",
+                "question": "<strong>Objectives</strong>",
+                "field_id": 55435711
+            }, {
+                "id": "textarea_55435935",
+                "question": "What are your <strong>top three health concerns</strong>?",
+                "field_id": 55435935
+            }, {
+                "id": "textfield_55449890",
+                "question": "<strong>Body Systems</strong>",
+                "field_id": 55449890
+            }, {
+                "id": "list_55509344_choice",
+                "question": "Are you experiencing any of these cardiovascular issues?",
+                "field_id": 55509344
+            }, {
+                "id": "list_55509368_choice",
+                "question": "Are you experiencing any digestive issues?",
+                "field_id": 55509368
+            }, {
+                "id": "list_55509397_choice",
+                "question": "Do you struggle with any skin or dermatological issues?",
+                "field_id": 55509397
+            }, {
+                "id": "list_55509408_choice",
+                "question": "Are you battling any immune system issues?",
+                "field_id": 55509408
+            }, {
+                "id": "list_55509426_choice",
+                "question": "What about musculoskeletal issues?",
+                "field_id": 55509426
+            }, {
+                "id": "list_55509464_choice",
+                "question": "Any problems with your nervous system?",
+                "field_id": 55509464
+            }, {
+                "id": "list_55509488_choice",
+                "question": "Are you experiencing any mental health issues?",
+                "field_id": 55509488
+            }, {
+                "id": "list_55509526_choice",
+                "question": "Are you experiencing any respiratory issues?",
+                "field_id": 55509526
+            }, {
+                "id": "textfield_55450129",
+                "question": "<strong>Gender Specific</strong>",
+                "field_id": 55450129
+            }, {
+                "id": "textfield_55450268",
+                "question": "What is your <strong>gender</strong>?",
+                "field_id": 55450268
+            }, {
+                "id": "list_55509823_choice",
+                "question": "If <em>Male</em>: Are you dealing with any reproductive or hormonal issues?",
+                "field_id": 55509823
+            }, {
+                "id": "list_55509825_choice",
+                "question": "If <em>Female</em>: Are you dealing with any reproductive or hormonal issues?",
+                "field_id": 55509825
+            }, {
+                "id": "yesno_55509963",
+                "question": "If <em>Female</em>: Are you pregnant or thinking about pregnancy?",
+                "field_id": 55509963
+            }, {
+                "id": "date_55450645",
+                "question": "If Female: When was your last <strong>menstrual</strong> cycle?",
+                "field_id": 55450645
+            }, {
+                "id": "list_55509965_choice",
+                "question": "If <em>Male</em>: Are you experiencing any of the following symptoms?",
+                "field_id": 55509965
+            }, {
+                "id": "statement_55411633",
+                "question": "Let's talk about energy.",
+                "field_id": 55411633
+            }, {
+                "id": "rating_55410944",
+                "question": "How would you rate your daytime energy levels?",
+                "field_id": 55410944
+            }, {
+                "id": "yesno_55451119",
+                "question": "Have you ever felt unusually <strong>fatigued</strong> during the day?",
+                "field_id": 55451119
+            }, {
+                "id": "list_55509999_choice",
+                "question": "If Yes: What time of day was the worst?",
+                "field_id": 55509999
+            }, {
+                "id": "statement_55451205",
+                "question": "<strong>Work, Stress & Sleep</strong>",
+                "field_id": 55451205
+            }, {
+                "id": "rating_55510006",
+                "question": "How much do you enjoy your job?",
+                "field_id": 55510006
+            }, {
+                "id": "rating_55510016",
+                "question": "How stressful is your job?",
+                "field_id": 55510016
+            }, {
+                "id": "list_55451327_choice",
+                "question": "How many hours do you work per week on average?",
+                "field_id": 55451327
+            }, {
+                "id": "list_55451438_choice",
+                "question": "How many hours of sleep do you get per night?",
+                "field_id": 55451438
+            }, {
+                "id": "rating_55510060",
+                "question": "How stressful is your life outside of work? Family, personal relationships, etc.",
+                "field_id": 55510060
+            }, {
+                "id": "statement_55451531",
+                "question": "<strong>Exercise</strong>",
+                "field_id": 55451531
+            }, {
+                "id": "yesno_55451598",
+                "question": "Do you exercise regularly?",
+                "field_id": 55451598
+            }, {
+                "id": "rating_55451658",
+                "question": "If Yes: How would you rate the difficulty of your exercise regiment?",
+                "field_id": 55451658
+            }, {
+                "id": "dropdown_55451771",
+                "question": "If Yes: How many days per week do you exercise?",
+                "field_id": 55451771
+            }, {
+                "id": "number_55451819",
+                "question": "If Yes: How many minutes do you normally exercise?",
+                "field_id": 55451819
+            }, {
+                "id": "textfield_55451837",
+                "question": "If Yes: What types of exercises do you do regularly?",
+                "field_id": 55451837
+            }, {
+                "id": "yesno_55451848",
+                "question": "If Yes: Do any of your symptoms interfere with your exercises?",
+                "field_id": 55451848
+            }, {
+                "id": "yesno_55410879",
+                "question": "How about any renal/urinary issues \u2014 like loss of bladder control, urinary tract infection or liver/kidney problems?",
+                "field_id": 55410879
+            }, {
+                "id": "rating_55451896",
+                "question": "How would you rate your eating habits?",
+                "field_id": 55451896
+            }, {
+                "id": "textfield_55451906",
+                "question": "What is your most common breakfast?",
+                "field_id": 55451906
+            }, {
+                "id": "textfield_55451927",
+                "question": "What is your most common lunch?",
+                "field_id": 55451927
+            }, {
+                "id": "textfield_55451940",
+                "question": "What is your most common dinner?",
+                "field_id": 55451940
+            }, {
+                "id": "textfield_55451967",
+                "question": "What is your favorite snack food?",
+                "field_id": 55451967
+            }, {
+                "id": "number_55451977",
+                "question": "How many glasses of water do you drink per day?",
+                "field_id": 55451977
+            }, {
+                "id": "yesno_55451995",
+                "question": "Do you drink coffee?",
+                "field_id": 55451995
+            }, {
+                "id": "number_55452008",
+                "question": "How many bowel movements do you have in an average week?",
+                "field_id": 55452008
+            }, {
+                "id": "textfield_55452016",
+                "question": "What is one food you will never eat?",
+                "field_id": 55452016
+            }, {
+                "id": "textfield_55452067",
+                "question": "What is your mailing address (for shipping lab kits)?",
+                "field_id": 55452067
+            }, {
+                "id": "list_55510091_choice",
+                "question": "Are you particularly interested in any of these lab tests?",
+                "field_id": 55510091
+            }, {
+                "id": "yesno_55452334",
+                "question": "Would you be interested in learning more about 3-6 month financing options for our lab tests, which can range from $100 to $300 each?",
+                "field_id": 55452334
+            }, {
+                "id": "textfield_55452383",
+                "question": "What brings you the most joy in life?",
+                "field_id": 55452383
+            }, {
+                "id": "textarea_55452392",
+                "question": "Anything else you\u2019d like your doctor to know?",
+                "field_id": 55452392
+            }, {
+                "id": "hidden_harvey_id",
+                "question": "harvey_id",
+                "field_id": 405045
+            }, {
+                "id": "hidden_intake_validation_token",
+                "question": "intake_validation_token",
+                "field_id": 445333
+            }],
+            "responses": [{
+                "completed": "1",
+                "token": "b20ea4e0ae2d7504a8b78aacf1f963b6",
+                "metadata": {
+                    "browser": "default",
+                    "platform": "other",
+                    "date_land": "2017-11-06 15:00:33",
+                    "date_submit": "2017-11-06 15:06:52",
+                    "user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0",
+                    "referer": "https://goharvey.typeform.com/to/XGnCna?harvey_id=xxxxx&intake_validation_token=xxxxx",
+                    "network_id": "0719641417"
+                },
+                "hidden": {
+                    "harvey_id": "2",
+                    "intake_validation_token": "79f34420af302c477c260ef2d6459626e81dc2ca"
+                },
+                "answers": {
+                    "yesno_55410452": "0",
+                    "date_55410467": "1944-03-04",
+                    "number_55432555": "20",
+                    "number_55433816": "50",
+                    "number_55434023": "50",
+                    "yesno_55434108": "0",
+                    "list_57969547_choice": "Influencer",
+                    "dropdown_55434799": "CA",
+                    "textfield_55434845": "Santa Monica",
+                    "textfield_55435066": "No",
+                    "yesno_55410469": "0",
+                    "list_55509223_choice": "Auto-Immune Disease",
+                    "textfield_55435503": "No",
+                    "list_55509266_choice": "Tobacco",
+                    "textfield_55435600": "Ble",
+                    "yesno_55410585": "1",
+                    "textfield_55435678": "B12",
+                    "textfield_55435711": "Blablabla",
+                    "textarea_55435935": "1, 2, 3",
+                    "list_55509344_choice": "Dizziness",
+                    "list_55509368_choice": "Stomach pain",
+                    "list_55509397_choice": "Acne",
+                    "list_55509408_choice": "Cold sore",
+                    "list_55509426_choice": "Tendonitis",
+                    "list_55509464_choice": "Tingling",
+                    "list_55509488_choice": "Emotional stress",
+                    "list_55509526_choice": "Yes, other",
+                    "textfield_55450129": "Nonono",
+                    "textfield_55450268": "a",
+                    "list_55509823_choice": "Low testosterone",
+                    "list_55509825_choice": "Pre/post-menopause",
+                    "yesno_55509963": "0",
+                    "date_55450645": "2017-10-10",
+                    "rating_55410944": "3",
+                    "yesno_55451119": "1",
+                    "list_55509999_choice": "Morning",
+                    "rating_55510006": "3",
+                    "rating_55510016": "3",
+                    "list_55451327_choice": "30",
+                    "list_55451438_choice": "3",
+                    "rating_55510060": "5",
+                    "yesno_55451598": "1",
+                    "rating_55451658": "5",
+                    "number_55451819": "90",
+                    "textfield_55451837": "Gym",
+                    "yesno_55451848": "0",
+                    "yesno_55410879": "1",
+                    "rating_55451896": "5",
+                    "textfield_55451906": "Donuts",
+                    "textfield_55451927": "Donuts",
+                    "textfield_55451940": "Donuts",
+                    "textfield_55451967": "Donuts",
+                    "number_55451977": "132",
+                    "yesno_55451995": "0",
+                    "number_55452008": "1",
+                    "textfield_55452016": "Meat",
+                    "textfield_55452067": "Evergreen 1234",
+                    "list_55510091_choice": "Toxic Metals",
+                    "yesno_55452334": "0",
+                    "textfield_55452383": "Eating Donuts",
+                    "textarea_55452392": "No"
+                }
+            }],
+            "patient_id": 2
+        },
+        "links": {
+            "self": "https://www.goharvey.com/api/v1/intakes/b20ea4e0ae2d7504a8b78aacf1f963b6"
+        }
+    }
+}

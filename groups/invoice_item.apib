@@ -1,0 +1,23 @@
+# Group Invoice Item
+## Get Invoice Item [/api/v1/invoice_items/{invoice_item_id}{?per_page,include}]
+### Get Invoice Item [GET]
+
+Get a invoice item by ID.
+
++ Require Admin or current logged in User as the Patient of the Invoice Item.
+
++ Parameters
+    + invoice_item_id: `1` (number, required) - Must be a valid ID.
+    + include: `invoice` (string, optional) - Join relationship data.
+        + Members
+            + `invoice`
+            + `sku`
++ Request
+    + Headers
+        Authorization: Bearer {{ ACCESS_TOKEN }}
+        X-Requested-With: XMLHttpRequest
+        Content-Type: application/json
++ Response 200 (application/json)
+    + Headers
+    + Body
+        <!-- include(../responses/api/v1/invoice_items/1/get?include=invoice.json) -->

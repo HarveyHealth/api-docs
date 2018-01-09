@@ -1,0 +1,25 @@
+{
+    "data": [{
+        "type": "intake",
+        "id": "b20ea4e0ae2d7504a8b78aacf1f963b6",
+        "attributes": {
+            "questions": [<Hidden, see next example.>],
+            "responses": [<Hidden, see next example.>],
+            "patient_id": 2
+        },
+        "links": {
+            "self": "http://localhost:8000/api/v1/intake/b20ea4e0ae2d7504a8b78aacf1f963b6"
+        }
+    }, {
+        "type": "intake",
+        "id": "e6139f93eb47c9fe7eb7fc5ddb586511",
+        "attributes": {
+            "questions": [<Hidden, see next example.>],
+            "responses": [<Hidden, see next example.>],
+            "patient_id": 31
+        },
+        "links": {
+            "self": "http://localhost:8000/api/v1/intake/e6139f93eb47c9fe7eb7fc5ddb586511"
+        }
+    }]
+}

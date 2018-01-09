@@ -1,0 +1,109 @@
+{
+    "data": [
+        {
+            "type": "invoices",
+            "id": "1",
+            "attributes": {
+                "patient_id": "6",
+                "amount": "150.00",
+                "card_brand": "Visa",
+                "card_last_four": "4242",
+                "description": "60 Minute Consultation, Appointment #2 with Amanda Frick on 11/16/17",
+                "discount": "0.00",
+                "paid_on": {
+                    "date": "2017-11-03 17:32:00.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "status": "paid",
+                "subtotal": "150.00"
+            },
+            "links": {
+                "self": "http://goharvey.app/api/v1/invoices/1"
+            },
+            "relationships": {
+                "invoice_items": {
+                    "links": {
+                        "related": "http://goharvey.app/api/v1/invoices/1/invoice_items"
+                    },
+                    "data": [
+                        {
+                            "type": "invoice_item",
+                            "id": "1"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "invoices",
+            "id": "2",
+            "attributes": {
+                "patient_id": "7",
+                "amount": "75.00",
+                "card_brand": "Visa",
+                "card_last_four": "4242",
+                "description": "30 Minute Consultation, Appointment #4 with Amanda Frick on 11/15/17",
+                "discount": "0.00",
+                "paid_on": {
+                    "date": "2017-11-03 19:13:37.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "status": "paid",
+                "subtotal": "75.00"
+            },
+            "links": {
+                "self": "http://goharvey.app/api/v1/invoices/2"
+            },
+            "relationships": {
+                "invoice_items": {
+                    "links": {
+                        "related": "http://goharvey.app/api/v1/invoices/2/invoice_items"
+                    },
+                    "data": [
+                        {
+                            "type": "invoice_item",
+                            "id": "2"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "invoices",
+            "id": "3",
+            "attributes": {
+                "patient_id": "8",
+                "amount": "75.00",
+                "card_brand": "Visa",
+                "card_last_four": "4242",
+                "description": "30 Minute Consultation, Appointment #5 with Amanda Frick on 11/15/17",
+                "discount": "0.00",
+                "paid_on": {
+                    "date": "2017-11-03 19:20:46.000000",
+                    "timezone_type": 3,
+                    "timezone": "UTC"
+                },
+                "status": "paid",
+                "subtotal": "75.00"
+            },
+            "links": {
+                "self": "http://goharvey.app/api/v1/invoices/3"
+            },
+            "relationships": {
+                "invoice_items": {
+                    "links": {
+                        "related": "http://goharvey.app/api/v1/invoices/3/invoice_items"
+                    },
+                    "data": [
+                        {
+                            "type": "invoice_item",
+                            "id": "3"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
