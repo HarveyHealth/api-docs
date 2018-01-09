@@ -1,8 +1,8 @@
-## Harvey API Documentation
-# Installation
+# Harvey API Documentation
+## Installation
 Clone repo and run `npm install`
 
-# Usage
+## Usage
 Run Aglio server (at `localhost:3000`)
 
 `npm run serve`
