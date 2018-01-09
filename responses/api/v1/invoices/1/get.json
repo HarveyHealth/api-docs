@@ -18,7 +18,7 @@
             "subtotal": "318.00"
         },
         "links": {
-            "self": "http://goharvey.app/api/v1/invoices/5"
+            "self": "http://goharvey.app/api/v1/invoices/1"
         }
     }
 }
