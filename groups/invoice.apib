@@ -8,9 +8,9 @@ View a listing of all invoices.
 
 + Parameters
     + per_page: `2` (number, optional) - Enables pagination and set items per page.
-    + include: `invoice_items` (string, optional) - Join relationship data.
+    + include: `items` (string, optional) - Join relationship data.
         + Members
-            + `invoice_items`
+            + `items`
             + `patient.user`
             + `patient`
 + Request
@@ -21,7 +21,7 @@ View a listing of all invoices.
 + Response 200 (application/json)
     + Headers
     + Body
-        <!-- include(../responses/api/v1/invoices/get?include=invoice_items.json) -->
+        <!-- include(../responses/api/v1/invoices/get?include=items.json) -->
 
 ## Get Invoice Items [/api/v1/invoices/{invoice_id}/invoice_items{?include}]
 ### Get Invoice Items [GET]
@@ -32,9 +32,9 @@ Get a invoice items by Invoice ID.
 
 + Parameters
     + invoice_id: `1` (number, required) - Must be a valid ID.
-    + include: `invoice_items` (string, optional) - Join relationship data.
+    + include: `items` (string, optional) - Join relationship data.
         + Members
-            + `invoice_items`
+            + `items`
             + `patient,user`
             + `patient`
 + Request
@@ -57,9 +57,9 @@ Get a invoice by its ID.
 
 + Parameters
     + invoice_id: `1` (number, required) - Must be a valid ID.
-    + include: `invoice_items` (string, optional) - Join relationship data.
+    + include: `items` (string, optional) - Join relationship data.
         + Members
-            + `invoice_items`
+            + `items`
             + `patient,user`
             + `patient`
 + Request
